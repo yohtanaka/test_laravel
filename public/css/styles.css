@@ -1,8 +1,34 @@
-.title {
+html, body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  border-bottom: solid 3px #e74430;
+}
+header img {
+  margin: 15px;
+}
+header h1 {
   color: #e74430;
+}
+#content {
+  padding-top: 120px;
+  background-color: #fce9e7;
+  height: 1000px;
 }
 .left {
   float: left;
+}
+.menu {
+  float: right;
+  margin: 30px;
 }
 .clearfix:after {
   clear: both;
