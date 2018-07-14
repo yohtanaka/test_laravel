@@ -1,0 +1,11 @@
+.title {
+  color: #e74430;
+}
+.left {
+  float: left;
+}
+.clearfix:after {
+  clear: both;
+  display: block;
+  content: '';
+}
