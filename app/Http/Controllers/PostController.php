@@ -13,12 +13,19 @@ class PostController extends Controller
 
   public function create()
   {
-      //
+    return view('post.create');
+  }
+
+  public function confirm(Request $request)
+  {
+    $name = $_POST['name'];
+
+    return view('post.confirm', compact('name'));
   }
 
   public function store(Request $request)
   {
-      //
+    return view('post.store');
   }
 
   public function show($id)

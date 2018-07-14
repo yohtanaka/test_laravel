@@ -3,5 +3,6 @@
 @section('title', 'Post')
 
 @section('content')
-<a href="/post/create">投稿する</a>
+投稿ありがとうございます！！
+<a href="/">投稿一覧にもどる</a>
 @endsection

@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
 </head>
 <body>
   @include('layouts.header')
