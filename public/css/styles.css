@@ -1,4 +1,3 @@
-@import "node_modules/font-awesome/scss/font-awesome";
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +30,7 @@ footer li {
 #content {
   padding: 120px;
   background-color: #fce9e7;
-  min-height: 500px;
+  min-height: 1000px;
 }
 #content li {
   margin: 20px 0;
