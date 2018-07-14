@@ -1,6 +1,6 @@
 $laravel: #e74430;
 
-html, body {
+* {
   margin: 0;
   padding: 0;
 }
@@ -19,13 +19,26 @@ header {
   }
   h1 {
     color: $laravel;
+    line-height: 100px;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  height: 100px;
+  li {
+    float: left;
   }
 }
 
 #content {
-  padding-top: 120px;
+  padding: 120px;
   background-color: lighten($laravel, 40%);
-  height:1000px;
+  min-height:500px;
+  li {
+    margin: 20px 0;
+  }
 }
 
 .left {
@@ -41,4 +54,8 @@ header {
   clear: both;
   display: block;
   content: '';
+}
+
+.copy-right {
+  text-align: center;
 }
