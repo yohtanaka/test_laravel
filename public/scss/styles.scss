@@ -26,9 +26,12 @@ header {
 footer {
   background-color: #333;
   color: #fff;
-  height: 100px;
+  height: 150px;
   li {
     float: left;
+  }
+  p {
+    padding: 10px;
   }
 }
 

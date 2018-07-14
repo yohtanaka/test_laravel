@@ -22,10 +22,13 @@ header h1 {
 footer {
   background-color: #333;
   color: #fff;
-  height: 100px;
+  height: 150px;
 }
 footer li {
   float: left;
+}
+footer p {
+  padding: 10px;
 }
 #content {
   padding: 120px;
