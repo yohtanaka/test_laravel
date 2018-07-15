@@ -67,3 +67,6 @@ footer p {
 th, td, tr {
   padding: 5px 30px;
 }
+.table-content {
+  width: 400px;
+}

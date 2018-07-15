@@ -9,12 +9,12 @@
   {{ csrf_field() }}
   <table>
     <tr>
-      <td><input type="radio" name="mailto" value="{{ env('USER_EMAIL') }}" checked>田中にメール</td>
+      <td><input id="mailoff" type="radio" name="mailto" value="{{ env('USER_EMAIL') }}" checked>田中にメール</td>
       <td></td>
     </tr>
     <tr>
-      <td><input id="mailto" type="radio" name="mailto">送信先アドレスを入力</td>
-      <td id="mailto-input" class="table-content">ふぁふぁ</td>
+      <td><input id="mailon" type="radio" name="mailto">送信先アドレスを入力</td>
+      <td id="mailto" class="table-content"></td>
     </tr>
   </table>
   <hr>
