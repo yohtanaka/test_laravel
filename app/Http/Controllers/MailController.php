@@ -14,13 +14,15 @@ class MailController extends Controller
 
   public function confirm(Request $request)
   {
-    return view('mail.confirm');
+    $data = $request->all();
+    $request->session()->put($data);
+    return view('mail.confirm', compact('data'));
   }
 
   public function sent(Request $request)
   {
-    $data=[];
-    Mail::send(['text' => 'mail.temp'], $data, function($message){ $message->to(env('USER_EMAIL'))->subject("テスト送信"); });
+    $data = session()->all();
+    Mail::send(['text' => 'mail.temp'], $data, function($message) use($data){ $message->to($data['mailto'])->subject($data['subject']); });
     return view('mail.sent');
   }
 }
