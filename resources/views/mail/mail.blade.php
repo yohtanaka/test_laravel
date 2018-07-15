@@ -14,7 +14,9 @@
     </tr>
     <tr>
       <td><input id="mailon" type="radio" name="mailto">送信先アドレスを入力</td>
-      <td id="mailto" class="table-content"></td>
+      <td id="mailto" class="table-content">
+        <span class="error-message">{{ $errors->first('mailto') }}</span>
+      </td>
     </tr>
   </table>
   <hr>

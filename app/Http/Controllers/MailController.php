@@ -16,6 +16,7 @@ class MailController extends Controller
   {
     $rules = [
       'name'    => 'required',
+      'mailto'  => 'required',
       'subject' => 'required',
       'body'    => 'required',
     ];
