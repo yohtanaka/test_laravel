@@ -9,33 +9,39 @@
   {{ csrf_field() }}
   <table>
     <tr>
-      <td>送信先メールアドレス</td>
-      <td><input class="form-control" type="email" name="mailto"></td>
+      <td><input type="radio" name="mailto" value="{{ env('USER_EMAIL') }}" checked>田中にメール</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><input id="mailto" type="radio" name="mailto">送信先アドレスを入力</td>
+      <td id="mailto-input" class="table-content">ふぁふぁ</td>
     </tr>
   </table>
   <hr>
   <table>
     <tr>
       <td>あなたのメールアドレス</td>
-      <td><input class="form-control" type="email" name="mailfrom"></td>
+      <td class="table-content">
+        <input class="form-control" type="email" name="mailfrom">
+      </td>
     </tr>
     <tr>
       <td>お名前</td>
-      <td>
+      <td class="table-content">
         <input class="form-control" type="text" name="name" placeholder="必須">
         <span class="error-message">{{ $errors->first('name') }}</span>
       </td>
     </tr>
     <tr>
       <td>題名</td>
-      <td>
+      <td class="table-content">
         <input class="form-control" type="text" name="subject" placeholder="必須">
         <span class="error-message">{{ $errors->first('subject') }}</span>
       </td>
     </tr>
     <tr>
       <td>メール本文</td>
-      <td>
+      <td class="table-content">
         <textarea class="form-control" name="body" placeholder="必須"></textarea>
         <span class="error-message">{{ $errors->first('body') }}</span>
       </td>
