@@ -20,7 +20,7 @@ header h1 {
   line-height: 100px;
 }
 footer {
-  background-color: #333;
+  background-color: #444;
   color: #fff;
   height: 150px;
 }
@@ -33,9 +33,9 @@ footer p {
 #content {
   padding: 120px;
   background-color: #fce9e7;
-  min-height: 1000px;
+  min-height: 550px;
 }
-#content li {
+#content h2, #content li {
   margin: 20px 0;
 }
 .left {
@@ -43,7 +43,7 @@ footer p {
 }
 .menu {
   float: right;
-  margin: 30px;
+  margin: 40px;
 }
 .clearfix:after {
   clear: both;
@@ -52,4 +52,12 @@ footer p {
 }
 .copy-right {
   text-align: center;
+}
+.btn-laravel {
+  color: #fff;
+  background-color: #e74430;
+  margin: 10px;
+}
+.btn-laravel:hover {
+  background-color: #f2978b;
 }
