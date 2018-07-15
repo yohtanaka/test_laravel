@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class MailController extends Controller
 {
-  public function index()
+  public function mail()
   {
-    return view('mail.index');
+    return view('mail.mail');
   }
 
   public function confirm(Request $request)
