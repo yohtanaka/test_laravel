@@ -4,5 +4,5 @@
 
 @section('content')
 投稿ありがとうございます！！
-<a href="/">投稿一覧にもどる</a>
+<a href="/post">投稿一覧にもどる</a>
 @endsection

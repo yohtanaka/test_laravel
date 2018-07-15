@@ -24,7 +24,7 @@ header {
 }
 
 footer {
-  background-color: #333;
+  background-color: #444;
   color: #fff;
   height: 150px;
   li {
@@ -38,8 +38,8 @@ footer {
 #content {
   padding: 120px;
   background-color: lighten($laravel, 40%);
-  min-height:1000px;
-  li {
+  min-height:550px;
+  h2, li {
     margin: 20px 0;
   }
 }
@@ -50,7 +50,7 @@ footer {
 
 .menu {
   float: right;
-  margin: 30px
+  margin: 40px
 }
 
 .clearfix:after {
@@ -61,4 +61,25 @@ footer {
 
 .copy-right {
   text-align: center;
+}
+
+.btn-laravel {
+  color: #fff;
+  background-color: $laravel;
+  margin: 10px;
+  &:hover {
+    background-color: lighten($laravel, 20%);
+  }
+}
+
+.error-message {
+  color: red;
+}
+
+th, td, tr {
+  padding: 5px 30px;
+}
+
+.table-content {
+  width: 400px;
 }
