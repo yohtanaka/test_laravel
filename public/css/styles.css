@@ -61,3 +61,6 @@ footer p {
 .btn-laravel:hover {
   background-color: #f2978b;
 }
+.error-message {
+  color: red;
+}

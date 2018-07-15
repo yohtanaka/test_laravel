@@ -14,6 +14,13 @@ class MailController extends Controller
 
   public function confirm(Request $request)
   {
+    $rules = [
+      'name'    => 'required',
+      'subject' => 'required',
+      'body'    => 'required',
+    ];
+    $this->validate($request, $rules);
+
     $data = $request->all();
     $request->session()->put($data);
     return view('mail.confirm', compact('data'));

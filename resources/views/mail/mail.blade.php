@@ -21,18 +21,27 @@
     </tr>
     <tr>
       <td>お名前</td>
-      <td><input type="text" name="name" placeholder="必須"></td>
+      <td>
+        <input type="text" name="name" placeholder="必須">
+        <span class="error-message">{{ $errors->first('name') }}</span>
+      </td>
     </tr>
     <tr>
       <td>題名</td>
-      <td><input type="text" name="subject" placeholder="必須"></td>
+      <td>
+        <input type="text" name="subject" placeholder="必須">
+        <span class="error-message">{{ $errors->first('subject') }}</span>
+      </td>
     </tr>
     <tr>
       <td>メール本文</td>
-      <td><input type="textarea" name="body" placeholder="必須"></td>
+      <td>
+        <input type="textarea" name="body" placeholder="必須">
+        <span class="error-message">{{ $errors->first('body') }}</span>
+      </td>
     </tr>
   </table>
-  <input type="submit" class="btn btn-laravel" value="送信する">
+  <input type="submit" class="btn btn-laravel" value="確認画面へ">
   <input type="reset" class="btn btn-laravel" value="リセット">
 </form>
 @endsection
