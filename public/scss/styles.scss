@@ -20,6 +20,9 @@ header {
   h1 {
     color: $laravel;
     line-height: 100px;
+    span {
+      font-size: 70%;
+    }
   }
 }
 

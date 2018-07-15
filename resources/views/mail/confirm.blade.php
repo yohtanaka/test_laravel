@@ -1,6 +1,6 @@
 @extends('layouts.common')
 
-@section('title', 'Post')
+@section('title', 'Mail')
 
 @section('content')
 <h2>メールの送信機能</h2>
@@ -38,4 +38,6 @@
     </tr>
   </table>
   <input type="submit" class="btn btn-laravel" value="送信する">
+  <a href="/mail" class="btn btn-laravel" >戻る</a>
+</form>
 @endsection

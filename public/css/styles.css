@@ -19,6 +19,9 @@ header h1 {
   color: #e74430;
   line-height: 100px;
 }
+header h1 span {
+  font-size: 70%;
+}
 footer {
   background-color: #444;
   color: #fff;

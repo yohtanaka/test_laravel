@@ -1,6 +1,6 @@
 @extends('layouts.common')
 
-@section('title', 'Post')
+@section('title', 'Mail')
 
 @section('content')
 <h2>メールの送信機能</h2>
