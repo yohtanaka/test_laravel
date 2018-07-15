@@ -18,4 +18,4 @@ Route::post('/post/destroy/{id}','PostController@destroy');
 // mail
 Route::get('/mail', 'MailController@index');
 Route::post('/mail/confirm', 'MailController@confirm');
-Route::post('/mail/store', 'MailController@send');
+Route::get('/mail/sent', 'MailController@sent');

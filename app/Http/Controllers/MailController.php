@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use Illuminate\Http\Request;
 
 class MailController extends Controller
@@ -16,8 +17,10 @@ class MailController extends Controller
     return view('mail.confirm');
   }
 
-  public function send(Request $request)
+  public function sent(Request $request)
   {
-    return view('mail.send');
+    $data=[];
+    Mail::send(['text' => 'mail.temp'], $data, function($message){ $message->to(env('USER_EMAIL'))->subject("テスト送信"); });
+    return view('mail.sent');
   }
 }

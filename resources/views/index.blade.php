@@ -5,6 +5,7 @@
 @section('content')
 <h2>機能のテスト実装</h2>
 <ul>
-  <li><a href="/post">投稿機能 (データベースへの保存</a></li>
+  <li><a href="/post">[WIP]投稿機能 (DBへの保存)</a></li>
+  <li><a href="/mail">[WIP]メールの送信機能</a></li>
 </ul>
 @endsection

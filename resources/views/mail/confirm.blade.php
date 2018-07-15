@@ -3,4 +3,5 @@
 @section('title', 'Post')
 
 @section('content')
+
 @endsection
