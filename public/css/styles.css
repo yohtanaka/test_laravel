@@ -80,3 +80,6 @@ th, td, tr {
 .post-table th {
   border-bottom: 2px solid #e74430;
 }
+.post-table td {
+  max-width: 400px;
+}
