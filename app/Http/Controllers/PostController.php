@@ -18,9 +18,17 @@ class PostController extends Controller
 
   public function confirm(Request $request)
   {
-    $name = $_POST['name'];
+    $rules = [
+      'name'        => 'required',
+      'category'    => 'required',
+      'discription' => 'required',
+      'rating'      => 'required',
+    ];
+    $this->validate($request, $rules);
 
-    return view('post.confirm', compact('name'));
+    $data = $request->all();
+    $request->session()->put($data);
+    return view('post.confirm', compact('data'));
   }
 
   public function store(Request $request)

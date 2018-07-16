@@ -98,8 +98,10 @@ return [
     */
     'attributes' => [
         'mailto'  => '送信先アドレス',
-        'name'    => 'お名前',
+        'name'    => '名前',
         'subject' => '題名',
-        'body'    => 'メール本文'
+        'body'    => 'メール本文',
+        'discription' => 'オススメポイント',
+        'rating'  => '10段階評価',
     ],
 ];
