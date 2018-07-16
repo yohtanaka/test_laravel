@@ -17,9 +17,9 @@ class CreateStoresTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('category');
-            $table->string('discription');
+            $table->text('discription');
             $table->integer('rating');
-            $table->integer('date');
+            $table->date('date')->nullable(true);
             $table->timestamps();
         });
     }
