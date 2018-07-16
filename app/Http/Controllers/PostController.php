@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Store;
 
 class PostController extends Controller
 {
@@ -18,13 +19,28 @@ class PostController extends Controller
 
   public function confirm(Request $request)
   {
-    $name = $_POST['name'];
+    $rules = [
+      'name'        => 'required',
+      'category'    => 'required',
+      'discription' => 'required',
+      'rating'      => 'required',
+    ];
+    $this->validate($request, $rules);
 
-    return view('post.confirm', compact('name'));
+    $data = $request->all();
+    $request->session()->put($data);
+    return view('post.confirm', compact('data'));
   }
 
   public function store(Request $request)
   {
+    $store = new Store();
+    $store->name        = $request->input('name');
+    $store->category    = $request->input('category');
+    $store->discription = $request->input('discription');
+    $store->rating      = $request->input('rating');
+    $store->date        = $request->input('date');
+    $store->save();
     return view('post.store');
   }
 
