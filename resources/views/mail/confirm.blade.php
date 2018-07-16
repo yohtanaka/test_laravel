@@ -15,26 +15,26 @@
   <table>
     <tr>
       <td>送信先メールアドレス</td>
-      <td>{{ $data['mailto'] }}</td>
+      <td class="table-content">{{ $data['mailto'] }}</td>
     </tr>
   </table>
   <hr>
   <table>
     <tr>
       <td>あなたのメールアドレス</td>
-      <td>{{ $data['mailfrom'] }}</td>
+      <td class="table-content">{{ $data['mailfrom'] }}</td>
     </tr>
     <tr>
       <td>お名前</td>
-      <td>{{ $data['name'] }}</td>
+      <td class="table-content">{{ $data['name'] }}</td>
     </tr>
     <tr>
       <td>題名</td>
-      <td>{{ $data['subject'] }}</td>
+      <td class="table-content">{{ $data['subject'] }}</td>
     </tr>
     <tr>
       <td>メール本文</td>
-      <td>{{ $data['body'] }}</td>
+      <td class="table-content">{{ $data['body'] }}</td>
     </tr>
   </table>
   <input type="submit" class="btn btn-laravel" value="送信する">
