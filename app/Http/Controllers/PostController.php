@@ -9,7 +9,9 @@ class PostController extends Controller
 {
   public function index()
   {
-    return view('post.index');
+    $stores = Store::latest()->get();
+    $categories = ["食事", "デザート", "飲み", "テイクアウト", "その他"];
+    return view('post.index', compact('stores', 'categories'));
   }
 
   public function create()

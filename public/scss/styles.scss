@@ -86,3 +86,11 @@ th, td, tr {
 .table-content {
   width: 400px;
 }
+
+.post-table {
+  background-color: #fff;
+  border-radius: 10px;
+  th {
+    border-bottom: 2px solid $laravel;
+  }
+}

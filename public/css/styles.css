@@ -73,3 +73,10 @@ th, td, tr {
 .table-content {
   width: 400px;
 }
+.post-table {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.post-table th {
+  border-bottom: 2px solid #e74430;
+}
