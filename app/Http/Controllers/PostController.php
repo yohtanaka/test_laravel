@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Store;
 
 class PostController extends Controller
 {
@@ -33,6 +34,13 @@ class PostController extends Controller
 
   public function store(Request $request)
   {
+    $store = new Store();
+    $store->name        = $request->input('name');
+    $store->category    = $request->input('category');
+    $store->discription = $request->input('discription');
+    $store->rating      = $request->input('rating');
+    $store->date        = $request->input('date');
+    $store->save();
     return view('post.store');
   }
 

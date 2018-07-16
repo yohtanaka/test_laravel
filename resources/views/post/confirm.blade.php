@@ -7,11 +7,11 @@
 <p>以下の通り 送信してよろしいですか？</p>
 <form action="/post/store" method="post" accept-charset="utf-8">
   {{ csrf_field() }}
-  <input type="hidden" value="{{ $data['name'] }}">
-  <input type="hidden" value="{{ $data['category'] }}">
-  <input type="hidden" value="{{ $data['discription'] }}">
-  <input type="hidden" value="{{ $data['rating'] }}">
-  <input type="hidden" value="{{ $data['date'] }}">
+  <input type="hidden" name ="name" value="{{ $data['name'] }}">
+  <input type="hidden" name ="category" value="{{ $data['category'] }}">
+  <input type="hidden" name ="discription" value="{{ $data['discription'] }}">
+  <input type="hidden" name ="rating" value="{{ $data['rating'] }}">
+  <input type="hidden" name ="date" value="{{ $data['date'] }}">
   <table>
     <tr>
       <td>お店の名前</td>
@@ -34,8 +34,6 @@
       <td class="table-content">{{ $data['date'] }}</td>
     </tr>
   </table>
-
-
   <input type="submit" class="btn btn-laravel" value="投稿する">
   <a href="/post/create" class="btn btn-laravel" >戻る</a>
 </form>
