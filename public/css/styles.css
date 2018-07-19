@@ -41,6 +41,9 @@ footer p {
 #content h2, #content li {
   margin: 20px 0;
 }
+#csvFile {
+  display: none;
+}
 .left {
   float: left;
 }
