@@ -21,7 +21,7 @@ class CsvController extends Controller
   {
     try {
       $stores = Store::latest()->get();
-      $csvFileName = '../public/csv_export/' . time() . rand() . '.csv';
+      $csvFileName = '../public/storage/csv_export/' . time() . rand() . '.csv';
       $res = fopen($csvFileName, 'w');
       if ($res === FALSE) {
         throw new Exception('ファイルの書き込みに失敗しました。');
@@ -47,6 +47,5 @@ class CsvController extends Controller
       echo $e->getMessage();
 
     }
-    return view('csv.export');
   }
 }
