@@ -19,5 +19,5 @@ Route::post('/mail/confirm', 'MailController@confirm');
 Route::post('/mail/sent', 'MailController@sent');
 
 Route::get('/csv', 'CsvController@csv');
-Route::get('/csv/import', 'CsvController@import');
+Route::post('/csv/import', 'CsvController@import');
 Route::get('/csv/export', 'CsvController@export');
