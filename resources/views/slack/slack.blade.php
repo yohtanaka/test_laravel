@@ -4,6 +4,7 @@
 
 @section('content')
 <h2>Slackにメッセージ送信機能</h2>
+<p>田中のSlackチャンネルにメッセージを送信</p>
 <form action="/slack/post" method="post" accept-charset="utf-8">
   {{ csrf_field() }}
   <table>
