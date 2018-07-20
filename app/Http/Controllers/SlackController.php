@@ -6,25 +6,29 @@ use Illuminate\Http\Request;
 
 class SlackController extends Controller
 {
-  public function slack(Request $request)
+  public function slack()
   {
     return view('slack.slack');
   }
 
-  public function postMessage(Request $request)
+  public function post(Request $request)
   {
     $rules = [
-      'name'    => 'required',
       'message' => 'required',
     ];
     $this->validate($request, $rules);
 
     $slackApiKey = env('SLACK_API_KEY');
-    $name        = $request->input('name');
+    $mention     = $request->input('mention');
     $message     = $request->input('message');
-    $text        = urlencode($name.': '.$message);
-    $url         = "https://slack.com/api/chat.postMessage?token=${slackApiKey}&channel=%23post&text=${text}";
+    $text        = urlencode($mention.$message);
+    if ($request->input('user')){
+      $user      = "&as_user=true";
+    } else {
+      $user      = "";
+    }
+    $url         = "https://slack.com/api/chat.postMessage?token=${slackApiKey}&channel=%23post&text=${text}${user}";
     file_get_contents($url);
-    return view('slack.post');
+    return view('slack.slack');
   }
 }
