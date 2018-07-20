@@ -31,7 +31,7 @@
     <tr>
       <td>オススメポイント</td>
       <td class="table-content">
-        <textarea class="form-control" type="textarea" name="discription" placeholder="必須"></textarea>
+        <textarea class="form-control" name="discription" placeholder="必須"></textarea>
         <span class="error-message">{{ $errors->first('discription') }}</span>
       </td>
     </tr>
