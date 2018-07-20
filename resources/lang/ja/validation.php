@@ -83,7 +83,7 @@ return [
     */
     'custom' => [
         'attribute-name' => [
-            'rule-name' => 'custom-message',
+            'rule-name'  => 'custom-message',
         ],
     ],
     /*
@@ -96,12 +96,13 @@ return [
     | of "email". This simply helps us make messages a little cleaner.
     |
     */
-    'attributes' => [
+    'attributes'  => [
         'mailto'  => '送信先アドレス',
         'name'    => '名前',
         'subject' => '題名',
         'body'    => 'メール本文',
         'discription' => 'オススメポイント',
         'rating'  => '10段階評価',
+        'message' => 'メッセージ',
     ],
 ];
