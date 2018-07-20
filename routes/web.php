@@ -21,3 +21,6 @@ Route::post('/mail/sent', 'MailController@sent');
 Route::get('/csv', 'CsvController@csv');
 Route::post('/csv/import', 'CsvController@import');
 Route::get('/csv/export', 'CsvController@export');
+
+Route::get('/slack', 'SlackController@slack');
+Route::post('/slack/post', 'SlackController@postMessage');
