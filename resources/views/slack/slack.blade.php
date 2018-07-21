@@ -4,9 +4,11 @@
 
 @section('content')
 <h2>Slackにメッセージ送信機能</h2>
-<ul>
+<p>Enterで送信できます！改行はEnter+Shift</p>
+<hr>
+<ul id="slack">
   <li>workspace: postチャンネルに通知を送信</li>
-  <form action="/slack" method="post" accept-charset="utf-8">
+  <form id="slackform1" action="/slack" method="post" accept-charset="utf-8">
     {{ csrf_field() }}
     <table>
       <tr>
@@ -22,7 +24,7 @@
       <tr>
         <td>メッセージ</td>
         <td class="table-content">
-          <textarea class="form-control" name="message" placeholder="必須"></textarea>
+          <textarea id="slacktext1" class="form-control" name="message" placeholder="必須"></textarea>
           <span class="error-message">{{ $errors->first('message') }}</span>
         </td>
       </tr>
@@ -32,13 +34,13 @@
   </form>
   <hr>
   <li>yohei_tanakaとしてコメント送信</li>
-  <form action="/slack" method="post" accept-charset="utf-8">
+  <form id="slackform2" action="/slack" method="post" accept-charset="utf-8">
     {{ csrf_field() }}
     <table>
       <tr>
         <td>メッセージ</td>
         <td class="table-content">
-          <textarea class="form-control" name="message" placeholder="必須"></textarea>
+          <textarea id="slacktext2" class="form-control" name="message" placeholder="必須"></textarea>
           <span class="error-message">{{ $errors->first('message') }}</span>
         </td>
       </tr>
