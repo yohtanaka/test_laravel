@@ -24,3 +24,7 @@ Route::get('/csv/export', 'CsvController@export');
 
 Route::get('/slack', 'SlackController@slack');
 Route::post('/slack', 'SlackController@post');
+
+Route::get('/twitter', 'TwitterController@index');
+Route::get('/twitter/create', 'TwitterController@create');
+Route::post('/twitter/store', 'TwitterController@store');
