@@ -86,3 +86,9 @@ th, td, tr {
 .post-table td {
   max-width: 400px;
 }
+.tweet {
+  padding: 10px 15px;
+}
+.tweet p {
+  padding: 0 20px;
+}
