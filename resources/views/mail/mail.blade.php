@@ -5,8 +5,11 @@
 @section('content')
 <h2>メールの送信機能</h2>
 <p>下記のフォームより 必要項目を入力し 送信してください</p>
+<hr>
+<ul>
 <form action="/mail/confirm" method="post" accept-charset="utf-8">
   {{ csrf_field() }}
+  <li>送信先</li>
   <table>
     <tr>
       <td><input id="mailoff" type="radio" name="mailto" value="{{ env('USER_EMAIL') }}" checked>田中にメール</td>
@@ -20,6 +23,7 @@
     </tr>
   </table>
   <hr>
+  <li>送信情報</li>
   <table>
     <tr>
       <td>あなたのメールアドレス</td>
@@ -52,4 +56,5 @@
   <input type="submit" class="btn btn-laravel" value="確認画面へ">
   <input type="reset" class="btn btn-laravel" value="リセット">
 </form>
+</ul>
 @endsection
