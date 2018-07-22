@@ -9,12 +9,12 @@ class TwitterController extends Controller
 {
   public function index()
   {
-    $tck = env("TWITTER_CONSUMER_KEY");
-    $tcs = env("TWITTER_CONSUMER_SECRET");
-    $tat = env("TWITTER_ACCESS_TOKEN");
-    $tac = env("TWITTER_ACCESS_TOKEN_SECRET");
-
-    $connection = new TwitterOAuth($tck, $tcs, $tat, $tac);
+    $connection = new TwitterOAuth(
+      env("TWITTER_CONSUMER_KEY"),
+      env("TWITTER_CONSUMER_SECRET"),
+      env("TWITTER_ACCESS_TOKEN"),
+      env("TWITTER_ACCESS_TOKEN_SECRET")
+    );
     $contents = $connection->get(
       "statuses/home_timeline",
       array("count" => 20)
@@ -29,8 +29,21 @@ class TwitterController extends Controller
 
   public function store(Request $request)
   {
-    $result =  $connection->post(
-
+    $connection = new TwitterOAuth(
+      env("TWITTER_CONSUMER_KEY"),
+      env("TWITTER_CONSUMER_SECRET"),
+      env("TWITTER_ACCESS_TOKEN"),
+      env("TWITTER_ACCESS_TOKEN_SECRET")
     );
+    $result =  $connection->post(
+      "statuses/update",
+      array("status" => $request->input('body'))
+    );
+
+    if($connection->getLastHttpCode() == 200) {
+      return view('twitter.store');
+    } else {
+      return view('twitter.create');
+    }
   }
 }
