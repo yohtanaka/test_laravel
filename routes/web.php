@@ -28,3 +28,5 @@ Route::post('/slack', 'SlackController@post');
 Route::get('/twitter', 'TwitterController@index');
 Route::get('/twitter/create', 'TwitterController@create');
 Route::post('/twitter/store', 'TwitterController@store');
+Route::get('/twitter/search', 'TwitterController@search');
+Route::post('/twitter/show_result', 'TwitterController@showResult');

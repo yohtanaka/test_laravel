@@ -46,4 +46,26 @@ class TwitterController extends Controller
       return view('twitter.create');
     }
   }
+
+  public function search()
+  {
+    return view('twitter.search');
+  }
+
+  public function showResult(Request $request)
+  {
+    $connection = new TwitterOAuth(
+      env("TWITTER_CONSUMER_KEY"),
+      env("TWITTER_CONSUMER_SECRET"),
+      env("TWITTER_ACCESS_TOKEN"),
+      env("TWITTER_ACCESS_TOKEN_SECRET")
+    );
+
+    $result = $connection->get(
+      "search/tweets",
+      array("q" => $request->input('search'))
+    );
+    $contents = $result->statuses;
+    return view('twitter.show_result', compact('contents'));
+  }
 }
