@@ -7,6 +7,8 @@
 <ul>
   <li><a href="/twitter/create">ツイートを新規投稿</a></li>
   <hr>
+  <li><a href="/twitter/search">ツイートを検索</a></li>
+  <hr>
   <li>タイムラインに表示されている直近20ツイート</li>
   <a class="btn btn-laravel" href="/twitter">リロード</a>
   <div class="post-table">
@@ -20,5 +22,5 @@
     @endforeach
   </div>
 </ul>
-<a href="/twitter">tweetトップにもどる</a>
+<a href="/twitter">ツイートトップにもどる</a>
 @endsection

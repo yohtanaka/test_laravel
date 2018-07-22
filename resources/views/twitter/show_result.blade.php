@@ -17,5 +17,5 @@
     @endforeach
   </div>
 </ul>
-<a href="/twitter/search">検索画面にもどる</a>
+<a href="/twitter/search">ツイート検索画面にもどる</a>
 @endsection

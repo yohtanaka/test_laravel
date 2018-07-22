@@ -19,4 +19,5 @@
   <input type="submit" class="btn btn-laravel" value="投稿する">
   <input type="reset" class="btn btn-laravel" value="リセット">
 </form>
+<a href="/twitter">ツイート一覧にもどる</a>
 @endsection

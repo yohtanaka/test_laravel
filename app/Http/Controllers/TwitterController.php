@@ -19,7 +19,12 @@ class TwitterController extends Controller
       "statuses/home_timeline",
       array("count" => 20)
     );
-    return view('twitter.index', compact('contents'));
+    if($connection->getLastHttpCode() == 200)
+    {
+      return view('twitter.index', compact('contents'));
+    } else {
+      print "情報が取得できませんでした";
+    }
   }
 
   public function create()
@@ -40,7 +45,8 @@ class TwitterController extends Controller
       array("status" => $request->input('body'))
     );
 
-    if($connection->getLastHttpCode() == 200) {
+    if($connection->getLastHttpCode() == 200)
+    {
       return view('twitter.store');
     } else {
       return view('twitter.create');
