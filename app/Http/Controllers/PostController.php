@@ -24,14 +24,15 @@ class PostController extends Controller
     $rules = [
       'name'        => 'required',
       'category'    => 'required',
-      'discription' => 'required',
+      'description' => 'required',
       'rating'      => 'required',
     ];
     $this->validate($request, $rules);
 
     $data = $request->all();
+    $categories = ["食事", "デザート", "飲み", "テイクアウト", "その他"];
     $request->session()->put($data);
-    return view('post.confirm', compact('data'));
+    return view('post.confirm', compact('data', 'categories'));
   }
 
   public function store(Request $request)
@@ -39,7 +40,7 @@ class PostController extends Controller
     $store = new Store();
     $store->name        = $request->input('name');
     $store->category    = $request->input('category');
-    $store->discription = $request->input('discription');
+    $store->description = $request->input('description');
     $store->rating      = $request->input('rating');
     $store->date        = $request->input('date');
     $store->save();

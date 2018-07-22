@@ -52,7 +52,7 @@ class CsvController extends Controller
       $dataList[] = array("名前", "カテゴリ", "オススメポイント", "10段階評価", "最近行った日");
       $categories = ["食事", "デザート", "飲み", "テイクアウト", "その他"];
       foreach ($stores as $store) {
-        $dataList[] = array($store['name'], $categories[$store['category']], $store['discription'], $store['rating'], $store['date'], );
+        $dataList[] = array($store['name'], $categories[$store['category']], $store['description'], $store['rating'], $store['date'], );
       }
       foreach($dataList as $dataInfo) {
         mb_convert_variables('SJIS', 'UTF-8', $dataInfo);
