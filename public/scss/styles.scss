@@ -93,11 +93,21 @@ th, td, tr {
 
 .post-table {
   background-color: #fff;
+  padding: 10px;
   border-radius: 10px;
   th {
     border-bottom: 2px solid $laravel;
   }
   td {
     max-width: 400px;
+  }
+}
+
+.tweet {
+  background-color: #e0ffff;
+  margin: 10px;
+  border-radius: 10px;
+  p {
+    margin: 0 20px;
   }
 }

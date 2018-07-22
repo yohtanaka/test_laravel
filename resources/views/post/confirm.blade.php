@@ -9,7 +9,7 @@
   {{ csrf_field() }}
   <input type="hidden" name ="name" value="{{ $data['name'] }}">
   <input type="hidden" name ="category" value="{{ $data['category'] }}">
-  <input type="hidden" name ="discription" value="{{ $data['discription'] }}">
+  <input type="hidden" name ="description" value="{{ $data['description'] }}">
   <input type="hidden" name ="rating" value="{{ $data['rating'] }}">
   <input type="hidden" name ="date" value="{{ $data['date'] }}">
   <table>
@@ -19,11 +19,11 @@
     </tr>
     <tr>
       <td>ジャンル</td>
-      <td class="table-content">{{ $data['category'] }}</td>
+      <td class="table-content">{{ $categories[$data['category']] }}</td>
     </tr>
     <tr>
       <td>オススメポイント</td>
-      <td class="table-content">{{ $data['discription'] }}</td>
+      <td class="table-content">{{ $data['description'] }}</td>
     </tr>
     <tr>
       <td>10段階評価</td>

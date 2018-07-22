@@ -78,6 +78,7 @@ th, td, tr {
 }
 .post-table {
   background-color: #fff;
+  padding: 10px;
   border-radius: 10px;
 }
 .post-table th {
@@ -85,4 +86,12 @@ th, td, tr {
 }
 .post-table td {
   max-width: 400px;
+}
+.tweet {
+  background-color: #e0ffff;
+  margin: 10px;
+  border-radius: 10px;
+}
+.tweet p {
+  margin: 0 20px;
 }

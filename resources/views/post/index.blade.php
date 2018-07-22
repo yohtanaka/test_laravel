@@ -20,7 +20,7 @@
     <tr>
       <td>{{ $store['name'] }}</td>
       <td>{{ $categories[$store['category']] }}</td>
-      <td>{{ $store['discription'] }}</td>
+      <td>{{ $store['description'] }}</td>
       <td>{{ $store['rating'] }}</td>
       <td>{{ $store['date'] }}</td>
     </tr>

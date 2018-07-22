@@ -101,7 +101,7 @@ return [
         'name'    => '名前',
         'subject' => '題名',
         'body'    => 'メール本文',
-        'discription' => 'オススメポイント',
+        'description' => 'オススメポイント',
         'rating'  => '10段階評価',
         'message' => 'メッセージ',
     ],

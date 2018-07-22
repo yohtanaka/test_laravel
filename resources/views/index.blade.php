@@ -9,5 +9,6 @@
   <li><a href="/post">投稿機能 (DBへの保存)</a></li>
   <li><a href="/csv">CSV機能</a></li>
   <li><a href="/slack">Slackにメッセージ送信機能</a></li>
+  <li><a href="/twitter">Twitterにメッセージ送信機能</a></li>
 </ul>
 @endsection
