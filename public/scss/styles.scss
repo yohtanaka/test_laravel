@@ -93,6 +93,7 @@ th, td, tr {
 
 .post-table {
   background-color: #fff;
+  padding: 10px;
   border-radius: 10px;
   th {
     border-bottom: 2px solid $laravel;
@@ -103,8 +104,10 @@ th, td, tr {
 }
 
 .tweet {
-  padding: 10px 15px;
+  background-color: #e0ffff;
+  margin: 10px;
+  border-radius: 10px;
   p {
-    padding: 0 20px;
+    margin: 0 20px;
   }
 }
