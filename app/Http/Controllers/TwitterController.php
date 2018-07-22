@@ -24,11 +24,13 @@ class TwitterController extends Controller
 
   public function create()
   {
-
+    return view('twitter.create');
   }
 
   public function store(Request $request)
   {
+    $result =  $connection->post(
 
+    );
   }
 }

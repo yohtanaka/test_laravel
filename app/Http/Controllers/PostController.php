@@ -9,8 +9,8 @@ class PostController extends Controller
 {
   public function index()
   {
-    $stores = Store::latest()->get();
-    $categories = ["食事", "デザート", "飲み", "テイクアウト", "その他"];
+    $stores     = Store::latest()->get();
+    $categories = Store::$categories;
     return view('post.index', compact('stores', 'categories'));
   }
 
@@ -21,16 +21,9 @@ class PostController extends Controller
 
   public function confirm(Request $request)
   {
-    $rules = [
-      'name'        => 'required',
-      'category'    => 'required',
-      'description' => 'required',
-      'rating'      => 'required',
-    ];
-    $this->validate($request, $rules);
-
-    $data = $request->all();
-    $categories = ["食事", "デザート", "飲み", "テイクアウト", "その他"];
+    $this->validate($request, Store::$rules);
+    $data       = $request->all();
+    $categories = Store::$categories;
     $request->session()->put($data);
     return view('post.confirm', compact('data', 'categories'));
   }
