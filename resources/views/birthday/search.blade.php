@@ -10,7 +10,7 @@
 </p>
 <pre class="post-table">
 {{ $celebrities }}
+出典: Wikipedia
 </pre>
-<p>出典: Wikipedia</p>
 <a href="/birthday">誕生日入力画面にもどる</a>
 @endsection
