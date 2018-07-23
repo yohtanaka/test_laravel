@@ -30,3 +30,6 @@ Route::get('/twitter/create', 'TwitterController@create');
 Route::post('/twitter/store', 'TwitterController@store');
 Route::get('/twitter/search', 'TwitterController@search');
 Route::post('/twitter/show_result', 'TwitterController@showResult');
+
+Route::get('/birthday', 'BirthdayController@birthday');
+Route::post('/birthday/search', 'BirthdayController@search');
