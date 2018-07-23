@@ -14,6 +14,11 @@ class BirthdayController extends Controller
 
   public function search(Request $request)
   {
+    $rules    = [
+      'month' => 'required',
+      'day'   => 'required',
+    ];
+    $this->validate($request, $rules);
     $birthday    = $request->input('month')."月".$request->input('day')."日";
     $html        = file_get_contents("https://ja.wikipedia.org/wiki/${birthday}");
     $doc         = phpQuery::newDocument($html);

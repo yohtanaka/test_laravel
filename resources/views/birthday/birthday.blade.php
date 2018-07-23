@@ -11,6 +11,10 @@
     <input type="number" name="month" min="1" max="12"> 月
     <input type="number" name="day" min="1" max="31"> 日 生まれ
   </div>
+  <div>
+    <span class="error-message">{{ $errors->first('month') }}</span>
+    <span class="error-message">{{ $errors->first('day') }}</span>
+  </div>
   <input class="btn btn-laravel" type="submit" value="送信">
   <input class="btn btn-laravel" type="reset" value="リセット">
 </form>

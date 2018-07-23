@@ -104,5 +104,7 @@ return [
         'description' => 'オススメポイント',
         'rating'  => '10段階評価',
         'message' => 'メッセージ',
+        'month'   => '月',
+        'day'     => '日',
     ],
 ];
