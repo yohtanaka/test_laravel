@@ -14,6 +14,10 @@ class BirthdayController extends Controller
 
   public function search(Request $request)
   {
-    return view('birthday.search');
+    $birthday    = $request->input('month')."月".$request->input('day')."日";
+    $html        = file_get_contents("https://ja.wikipedia.org/wiki/${birthday}");
+    $doc         = phpQuery::newDocument($html);
+    $celebrities = $doc["#誕生日"]->parent()->nextAll('ul')->find('li')->text();
+    return view('birthday.search', compact('birthday', 'celebrities'));
   }
 }
