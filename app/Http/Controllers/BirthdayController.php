@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Date;
 use phpQuery;
 
 class BirthdayController extends Controller
@@ -14,11 +15,7 @@ class BirthdayController extends Controller
 
   public function search(Request $request)
   {
-    $rules    = [
-      'month' => 'required',
-      'day'   => 'required',
-    ];
-    $this->validate($request, $rules);
+    $this->validate($request, Date::$rules);
     $birthday    = $request->input('month')."月".$request->input('day')."日";
     $html        = file_get_contents("https://ja.wikipedia.org/wiki/${birthday}");
     $doc         = phpQuery::newDocument($html);
