@@ -11,5 +11,6 @@
   <li><a href="/slack">Slackにメッセージ送信機能</a></li>
   <li><a href="/twitter">Twitterにメッセージ送信機能</a></li>
   <li><a href="/birthday">同じ誕生日の有名人検索機能</a></li>
+  <li><a href="/timer">カウントダウンタイマー機能</a></li>
 </ul>
 @endsection
