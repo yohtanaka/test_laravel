@@ -3,7 +3,20 @@
 @section('title', 'Timer')
 
 @section('content')
+<div id="year" data-date="{{ $date['year'] }}"></div>
+<div id="month" data-date="{{ $date['month'] }}"></div>
+<div id="day" data-date="{{ $date['day'] }}"></div>
 <h2>カウントダウンタイマー機能</h2>
+<p>
+  東京オリンピックの開催日は
+    <strong>
+      {{ $date['year'] . '年' . $date['month'] . '月' . $date['day'] . '日' }}
+    </strong>
+  です！
+</p>
+<p>オリンピックまでの時間は・・・</p>
+<div id="timer"></div>
+<hr>
 <p>あなたの誕生日までの時間をカウントします</p>
 <p>誕生日を入力してください</p>
 <form action="/timer/birthday" method="post" accept-charset="utf-8">
