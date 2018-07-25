@@ -33,3 +33,6 @@ Route::post('/twitter/show_result', 'TwitterController@showResult');
 
 Route::get('/birthday', 'BirthdayController@birthday');
 Route::post('/birthday/search', 'BirthdayController@search');
+
+Route::get('/timer', 'TimerController@timer');
+Route::post('/timer/birthday', 'TimerController@birthday');
