@@ -18,7 +18,11 @@ function countdown() {
   if (diff > 0) {
     $("#timer").text(day + '日' + hour + '時間' + min + '分' + sec +'秒' + ms);
     setTimeout('countdown()', 10);
+  } else if ($('#bd').data('id') == 'happyBirthday' ) {
+    $("#timertext").text('おめでとうございます！')
+    $("#timer").text('ハッピーバースデー！！');
   } else {
-    $("#timer").text('*終了のメッセージ');
+    $("#timertext").text('ついに！！')
+    $("#timer").text('東京オリンピックは開催されました！！');
   }
 }
