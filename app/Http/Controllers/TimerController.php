@@ -8,11 +8,28 @@ class TimerController extends Controller
 {
   public function timer()
   {
-    return view('timer.timer');
+    $date = [
+      'year'  => '2020',
+      'month' => '7',
+      'day'   => '24'
+    ];
+    return view('timer.timer', compact('date'));
   }
 
   public function birthday(Request $request)
   {
-    return view('timer.birthday');
+    $date = [
+      'year'  => date('Y'),
+      'month' => sprintf('%02d', $request->input('month')),
+      'day'   => sprintf('%02d', $request->input('day'))
+    ];
+    $today = date('Ymd');
+    $birthday = $date['year'].$date['month'].$date['day'];
+    if ( $birthday < $today ) {
+      $date['year'] = intval($date['year']) +1;
+    } else if ( $birthday == $today ) {
+      $happy = 'happyBirthday';
+    }
+    return view('timer.birthday', compact('date', 'happy'));
   }
 }
