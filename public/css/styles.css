@@ -44,6 +44,9 @@ footer p {
 #csvFile {
   display: none;
 }
+#timer {
+  font-size: 32px;
+}
 .left {
   float: left;
 }
