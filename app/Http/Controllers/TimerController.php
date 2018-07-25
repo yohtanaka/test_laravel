@@ -27,9 +27,7 @@ class TimerController extends Controller
     $birthday = $date['year'].$date['month'].$date['day'];
     if ( $birthday < $today ) {
       $date['year'] = intval($date['year']) +1;
-    } else if ( $birthday == $today ) {
-      $happy = 'happyBirthday';
     }
-    return view('timer.birthday', compact('date', 'happy'));
+    return view('timer.birthday', compact('date'));
   }
 }
