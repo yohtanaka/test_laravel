@@ -14,14 +14,14 @@ class CsvController extends Controller
     return view('csv.csv');
   }
 
-  public function import()
+  public function import(Request $request)
   {
     $filePath = "../public/storage/csv_export/" . $_FILES["csvFile"]["name"];
     if (move_uploaded_file($_FILES["csvFile"]["tmp_name"], $filePath))
     {
       chmod($filePath, 0644);
     }else{
-        // ファイルの読み込みに失敗しました
+        print 'ファイルの読み込みに失敗しました';
     }
     $objFile = new SplFileObject($filePath);
     $objFile->setFlags(SplFileObject::READ_CSV);
@@ -44,7 +44,8 @@ class CsvController extends Controller
   {
     try {
       $stores = Store::latest()->get();
-      $csvFileName = '../public/storage/csv_export/' . time() . rand() . '.csv';
+      $dateCsv = date('YmdHis') . '.csv';
+      $csvFileName = '../public/storage/csv_export/' . $dateCsv;
       $res = fopen($csvFileName, 'w');
       if ($res === FALSE) {
         throw new Exception('ファイルの書き込みに失敗しました');
@@ -61,7 +62,7 @@ class CsvController extends Controller
       fclose($res);
 
       header('Content-Type: application/octet-stream');
-      header('Content-Disposition: attachment; filename=sampaleCsv.csv');
+      header("Content-Disposition: attachment; filename=${dateCsv}");
       header('Content-Transfer-Encoding: binary');
       header('Content-Length: ' . filesize($csvFileName));
       readfile($csvFileName);
