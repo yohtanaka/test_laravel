@@ -11,7 +11,7 @@ class TimerController extends Controller
   {
     $date = [
       'year'  => '2020',
-      'month' => '7',
+      'month' => '07',
       'day'   => '24'
     ];
     return view('timer.timer', compact('date'));
