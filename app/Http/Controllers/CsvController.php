@@ -16,6 +16,9 @@ class CsvController extends Controller
 
   public function import(Request $request)
   {
+    $rules = ['csvFile' => 'required',];
+    $this->validate($request, $rules);
+
     $filePath = "../public/storage/csv_export/" . $_FILES["csvFile"]["name"];
     if (move_uploaded_file($_FILES["csvFile"]["tmp_name"], $filePath))
     {
