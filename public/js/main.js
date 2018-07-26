@@ -22,4 +22,9 @@ $(function(){
       }
     });
   });
+
+  $('#csvFile').on('change', function() {
+    var fileName = $(this).prop('files')[0].name;
+    $('#filename').html('選択中のファイル: ' + fileName);
+  });
 })

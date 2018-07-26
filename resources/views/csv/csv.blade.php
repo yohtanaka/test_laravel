@@ -12,7 +12,8 @@
       <p class="btn btn-laravel">インポートするファイルを選択</p>
       <input type="file" id="csvFile" name="csvFile">
     </label>
-    <input class="btn btn-laravel" type="submit" name="" value="インポートし表示">
+    <input class="btn btn-laravel" type="submit" value="インポートし表示">
+    <div id="filename"></div>
   </form>
   <hr>
   <li>CSVファイルエクスポート</li>
