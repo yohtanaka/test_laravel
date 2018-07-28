@@ -23,8 +23,33 @@ $(function(){
     });
   });
 
-  $('#csvFile').on('change', function() {
+  $('.file').on('change', function() {
     var fileName = $(this).prop('files')[0].name;
     $('#filename').html('選択中のファイル: ' + fileName);
+  });
+
+  $('form').on('change', 'input[type="file"]', function(e) {
+    var file = e.target.files[0],
+        reader = new FileReader(),
+        $preview = $("#fileimage");
+        t = this;
+    if(file.type.indexOf("image") < 0){
+      return false;
+    }
+    reader.onload = (function(file) {
+      return function(e) {
+        $preview.empty();
+        $preview.append($('<img>').attr({
+                  src: e.target.result,
+                  height: "300px",
+                  class: "preview",
+                  title: file.name
+              }));
+      };
+    })(file);
+    reader.readAsDataURL(file);
+    $('#title').html('タイトル<input class="form-control post-table__short" type="text" name="title" placeholder="任意">')
+    $('#comment').html('コメント<input class="form-control post-table__short" type="text" name="comment" placeholder="任意">')
+    $('#send').html('<input class="btn btn-laravel" type="submit" value="確認画面へ">');
   });
 })

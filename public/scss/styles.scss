@@ -47,12 +47,12 @@ footer {
   }
 }
 
-#csvFile {
-  display: none;
-}
-
 #timer {
   font-size: 32px;
+}
+
+.file {
+  display: none;
 }
 
 .left {
@@ -105,6 +105,9 @@ th, td, tr {
   td {
     max-width: 400px;
   }
+  &__short {
+    max-width: 400px;
+  }
 }
 
 .tweet {
@@ -113,5 +116,15 @@ th, td, tr {
   border-radius: 10px;
   p {
     margin: 0 20px;
+  }
+}
+
+.photo {
+  margin: 2px 0;
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  &__wrapper {
+    text-align: center;
   }
 }

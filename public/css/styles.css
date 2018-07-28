@@ -41,11 +41,11 @@ footer p {
 #content h2, #content li {
   margin: 20px 0;
 }
-#csvFile {
-  display: none;
-}
 #timer {
   font-size: 32px;
+}
+.file {
+  display: none;
 }
 .left {
   float: left;
@@ -90,6 +90,9 @@ th, td, tr {
 .post-table td {
   max-width: 400px;
 }
+.post-table__short {
+  max-width: 400px;
+}
 .tweet {
   background-color: #e0ffff;
   margin: 10px;
@@ -97,4 +100,13 @@ th, td, tr {
 }
 .tweet p {
   margin: 0 20px;
+}
+.photo {
+  margin: 2px 0;
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+.photo__wrapper {
+  text-align: center;
 }
