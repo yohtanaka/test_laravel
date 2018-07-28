@@ -5,9 +5,13 @@
 @section('content')
 <h2>写真投稿機能</h2>
 <p>投稿する写真はこちらでよろしいですか？</p>
-{{ $hash['title'] }}
+@if ($hash['title'])
+  タイトル: {{ $hash['title'] }}
+@endif
 <br>
-{{ $hash['comment'] }}
+@if ($hash['comment'])
+  コメント: {{ $hash['comment'] }}
+@endif
 <br>
 <img src="{{ $hash['image'] }}">
 <br>

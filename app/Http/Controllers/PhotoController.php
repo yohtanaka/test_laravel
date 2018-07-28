@@ -35,7 +35,9 @@ class PhotoController extends Controller
       $photo = new Photo;
       $photo->title   = $request->title;
       $photo->comment = $request->comment;
-      $photo->user_id = \Auth::user()->id;
+      if (\Auth::user()) {
+        $photo->user_id = \Auth::user()->id;
+      }
       $photo->save();
 
       $lastInsertedId = $photo->id;
