@@ -5,6 +5,7 @@
 @section('content')
 <h2>写真投稿機能</h2>
 <p>投稿する写真はこちらでよろしいですか？</p>
+<hr>
 @if ($hash['title'])
   タイトル: {{ $hash['title'] }}
 @endif
@@ -21,7 +22,7 @@
   <input type="hidden" name="title" value="{{ $hash['title'] }}">
   <input type="hidden" name="comment" value="{{ $hash['comment'] }}">
   <input type="hidden" name="image" value="{{ $hash['image'] }}">
-  <input type="submit" value="OK">
+  <input type="submit" class="btn btn-laravel" value="投稿する">
 </form>
 
 <a href="/photo">投稿一覧にもどる</a>
