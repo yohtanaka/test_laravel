@@ -30,5 +30,22 @@ class PhotoController extends Controller
 
     public function store(Request $request)
     {
+      $photo = new Photo;
+      $photo->title   = $request->title;
+      $photo->comment = $request->comment;
+      $photo->user_id = \Auth::user()->id;
+      $photo->save();
+
+      $lastInsertedId = $photo->id;
+
+      if (!file_exists(public_path() . "/images/" . $lastInsertedId)) {
+      mkdir(public_path() . "/images/" . $lastInsertedId, 0777);
+      }
+      $image_path = "/images/" . $lastInsertedId . "/image." . pathinfo($request->image, PATHINFO_EXTENSION);
+      rename(public_path() . $request->image, public_path() . $image_path);
+
+      $photo->image = $image_path;
+      $photo->update();
+      return view('photo.store');
     }
 }
