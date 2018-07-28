@@ -7,9 +7,12 @@
 <a href="/photo/create">新規投稿</a>
 <hr>
 <p>投稿写真一覧</p>
-<div class="photo__wrapper">
+<div class="text-center">
   @foreach($photos as $photo)
   <img src="{{ $photo['image'] }}" class="photo">
   @endforeach
+</div>
+<div>
+  {{ $photos->links() }}
 </div>
 @endsection
