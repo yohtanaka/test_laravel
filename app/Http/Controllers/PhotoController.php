@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Photo;
 
 class PhotoController extends Controller
 {
     public function index()
     {
-      return view('photo.index');
     }
 
     public function create()
@@ -18,11 +18,17 @@ class PhotoController extends Controller
 
     public function confirm(Request $request)
     {
-      return view('photo.confirm');
+      $image_name = uniqid("image_") . "." . $request->file('photo')->guessExtension();
+      $request->file('photo')->move(public_path() . "/images/tmp", $image_name);
+      $hash = array(
+        'image'   => "/images/tmp/".$image_name,
+        'title'   => $request->title,
+        'comment' => $request->comment,
+      );
+      return view('photo.confirm', compact('hash'));
     }
 
     public function store(Request $request)
     {
-      return view('photo.store');
     }
 }
