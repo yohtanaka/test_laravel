@@ -118,3 +118,13 @@ th, td, tr {
     margin: 0 20px;
   }
 }
+
+.photo {
+  margin: 2px 0;
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  &__wrapper {
+    text-align: center;
+  }
+}
