@@ -11,8 +11,9 @@
     <p class="btn btn-laravel">投稿する写真を選択</p>
     <input type="file" id="imageFile" class="file" name="photo">
   </label>
-  <input class="btn btn-laravel" type="submit" value="確認画面へ">
   <div id="filename"></div>
+  <div id="fileimage"></div>
+  <div id="send"></div>
 </form>
 <a href="/photo">投稿一覧にもどる</a>
 @endsection
