@@ -10,6 +10,11 @@ class Photo extends Model
     'user_id', 'title', 'comment'
   ];
 
+  public function rules()
+  {
+    return ['image' => 'required|image',];
+  }
+
   public function user()
   {
     return $this->belongsTo('App\User');
