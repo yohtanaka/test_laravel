@@ -16,7 +16,7 @@
   ですね？
 </p>
 <p id="timertext">あなたの誕生日までの時間は・・・</p>
-<div id="timer" class="post-table" style="width: 400px;"></div>
+<div id="timer" class="post-table post-table__short"></div>
 <br>
 <a href="/timer">オリンピックまでのタイマーにもどる</a>
 @endsection

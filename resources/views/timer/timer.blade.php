@@ -15,7 +15,7 @@
   です！
 </p>
 <p id="timertext">オリンピックまでの時間は・・・</p>
-<div id="timer" class="post-table" style="width: 400px;"></div>
+<div id="timer" class="post-table post-table__short"></div>
 <hr>
 <p>あなたの誕生日までの時間をカウントします</p>
 <p>誕生日を入力してください</p>
