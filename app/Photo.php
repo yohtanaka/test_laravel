@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Photo extends Model
 {
   protected $fillable = [
-    'user_id', 'title', 'comment'
+    'user_id', 'image', 'title', 'comment'
   ];
 
   public function rules()
