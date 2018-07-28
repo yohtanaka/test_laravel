@@ -48,6 +48,8 @@ $(function(){
       };
     })(file);
     reader.readAsDataURL(file);
+    $('#title').html('タイトル<input class="form-control post-table__short" type="text" name="title" placeholder="任意">')
+    $('#comment').html('コメント<input class="form-control post-table__short" type="text" name="comment" placeholder="任意">')
     $('#send').html('<input class="btn btn-laravel" type="submit" value="確認画面へ">');
   });
 })

@@ -13,6 +13,8 @@
   </label>
   <div id="filename"></div>
   <div id="fileimage"></div>
+  <div id="title"></div>
+  <div id="comment"></div>
   <div id="send"></div>
 </form>
 <a href="/photo">投稿一覧にもどる</a>
