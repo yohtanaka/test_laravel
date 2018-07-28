@@ -10,7 +10,7 @@
     {{ csrf_field() }}
     <label for="csvFile">
       <p class="btn btn-laravel">インポートするファイルを選択</p>
-      <input type="file" id="csvFile" name="csvFile">
+      <input type="file" id="csvFile" class="file" name="csvFile">
     </label>
     <input class="btn btn-laravel" type="submit" value="インポートし表示">
     <div id="filename"></div>
