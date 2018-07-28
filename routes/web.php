@@ -36,3 +36,8 @@ Route::post('/birthday/search', 'BirthdayController@search');
 
 Route::get('/timer', 'TimerController@timer');
 Route::post('/timer/birthday', 'TimerController@birthday');
+
+Route::get('/photo', 'PhotoController@index');
+Route::get('/photo/create', 'PhotoController@create');
+Route::post('/photo/confirm', 'PhotoController@confirm');
+Route::post('/photo/store', 'PhotoController@store');
