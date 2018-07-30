@@ -7,6 +7,9 @@
 <p>写真情報</p>
 <img src="{{ $photo['image'] }}">
 <ul>
+  @if ($photo['user_id'])
+    <li>投稿者: {{ $photo->user['name'] }}</li>
+  @endif
   @if ($photo['title'])
     <li>タイトル: {{ $photo['title'] }}</li>
   @endif
