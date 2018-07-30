@@ -9,7 +9,9 @@
 <p>投稿写真一覧</p>
 <div class="text-center">
   @foreach($photos as $photo)
-  <img src="{{ $photo['image'] }}" class="photo">
+  <a href="/photo/{{ $photo['id'] }}">
+    <img src="{{ $photo['image'] }}" class="photo">
+  </a>
   @endforeach
 </div>
 <div>

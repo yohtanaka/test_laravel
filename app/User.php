@@ -27,7 +27,7 @@ class User extends Authenticatable
       'password', 'remember_token',
     ];
 
-    public function photo()
+    public function photos()
     {
       return $this->hasMany('App\Photo');
     }

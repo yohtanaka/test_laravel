@@ -13,10 +13,11 @@ class PhotoController extends Controller
       return view('photo.index', compact('photos'));
     }
 
-    // public function show($id)
-    // {
-    //   $photo = Photo::
-    // }
+    public function show($id)
+    {
+      $photo = Photo::find($id);
+      return view('photo.show', compact('photo'));
+    }
 
     public function create()
     {
