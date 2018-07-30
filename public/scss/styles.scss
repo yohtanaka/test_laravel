@@ -124,4 +124,7 @@ th, td, tr {
   height: 350px;
   width: 350px;
   object-fit: cover;
+  &__large {
+    max-width: 100%;
+  }
 }

@@ -107,3 +107,6 @@ th, td, tr {
   width: 350px;
   object-fit: cover;
 }
+.photo__large {
+  max-width: 100%;
+}
