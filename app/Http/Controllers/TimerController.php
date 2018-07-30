@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Date;
+use App\Http\Requests\DateRequest;
 
 class TimerController extends Controller
 {
@@ -17,9 +17,8 @@ class TimerController extends Controller
     return view('timer.timer', compact('date'));
   }
 
-  public function birthday(Request $request)
+  public function birthday(DateRequest $request)
   {
-    $this->validate($request, Date::$rules);
     $date = [
       'year'  => date('Y'),
       'month' => sprintf('%02d', $request->input('month')),
