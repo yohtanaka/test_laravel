@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Store;
+use App\StoreComment;
 
 class PostController extends Controller
 {
   public function index()
   {
-    $stores     = Store::latest()->get();
-    $categories = Store::$categories;
+    $stores     = StoreComment::latest()->get();
+    $categories = StoreComment::$categories;
     return view('post.index', compact('stores', 'categories'));
   }
 
@@ -21,16 +21,16 @@ class PostController extends Controller
 
   public function confirm(Request $request)
   {
-    $this->validate($request, Store::$rules);
+    $this->validate($request, StoreComment::$rules);
     $data       = $request->all();
-    $categories = Store::$categories;
+    $categories = StoreComment::$categories;
     $request->session()->put($data);
     return view('post.confirm', compact('data', 'categories'));
   }
 
   public function store(Request $request)
   {
-    $store = new Store();
+    $store = new StoreComment();
     $store->name        = $request->input('name');
     $store->category    = $request->input('category');
     $store->description = $request->input('description');
