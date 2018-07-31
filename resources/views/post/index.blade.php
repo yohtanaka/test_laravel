@@ -12,6 +12,7 @@
     <tr>
       <th>名前</th>
       <th>カテゴリ</th>
+      <th>投稿者</th>
       <th>オススメポイント</th>
       <th>10段階評価</th>
       <th>最近行った日</th>
@@ -20,6 +21,7 @@
     <tr>
       <td>{{ $store['name'] }}</td>
       <td>{{ $categories[$store['category']] }}</td>
+      <td>{{ $store->user['name'] }}</td>
       <td>{{ $store['description'] }}</td>
       <td>{{ $store['rating'] }}</td>
       <td>{{ $store['date'] }}</td>

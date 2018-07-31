@@ -36,6 +36,9 @@ class PostController extends Controller
     $store->description = $request->input('description');
     $store->rating      = $request->input('rating');
     $store->date        = $request->input('date');
+    if (\Auth::user()) {
+      $store->user_id = \Auth::user()->id;
+    }
     $store->save();
     return view('post.store');
   }
