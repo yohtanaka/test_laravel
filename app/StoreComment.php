@@ -13,4 +13,9 @@ class StoreComment extends Model
     'description' => 'required',
     'rating'      => 'required',
   ];
+
+  public function user()
+  {
+    return $this->belongsTo('App\User');
+  }
 }
