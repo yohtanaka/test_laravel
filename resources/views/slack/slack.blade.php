@@ -12,24 +12,22 @@
     {{ csrf_field() }}
     <table>
       <tr>
+        <td>チャンネル</td>
+        <td class="table-content">
+          <select name="channel">
+            <option value="general">general</option>
+            <option value="random">random</option>
+            <option value="post">post</option>
+            <option value="test">test</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
         <td>投稿者</td>
         <td class="table-content">
           <select name="user">
             <option value=""></option>
             <option value="1">yohei_tanaka</option>
-            <option value="">API Tester</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>チャンネル</td>
-        <td class="table-content">
-          <select name="channel">
-            <option value=""></option>
-            <option value="general">general</option>
-            <option value="random">random</option>
-            <option value="post">post</option>
-            <option value="test">test</option>
           </select>
         </td>
       </tr>
