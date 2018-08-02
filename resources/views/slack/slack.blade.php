@@ -8,7 +8,7 @@
 <hr>
 <ul id="slack">
   <li>workspace: チャンネルに通知を送信</li>
-  <form id="slackform1" action="/slack" method="post" accept-charset="utf-8">
+  <form id="slackform" action="/slack" method="post" accept-charset="utf-8">
     {{ csrf_field() }}
     <table>
       <tr>
@@ -44,7 +44,7 @@
       <tr>
         <td>メッセージ</td>
         <td class="table-content">
-          <textarea id="slacktext2" class="form-control" name="message" placeholder="必須"></textarea>
+          <textarea id="slacktext" class="form-control" name="message" placeholder="必須"></textarea>
           <span class="error-message">{{ $errors->first('message') }}</span>
         </td>
       </tr>
