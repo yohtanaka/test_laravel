@@ -23,7 +23,7 @@ class SlackController extends Controller
     $mention     = $request->input('mention');
     $message     = $request->input('message');
     $text        = urlencode($mention.$message);
-    if ($request->input('user')){
+    if ($request->input('user') == "1"){
       $user      = "&as_user=true";
     } else {
       $user      = "";
