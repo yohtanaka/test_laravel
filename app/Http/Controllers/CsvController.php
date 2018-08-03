@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Store;
+use App\StoreComment;
 use SplFileObject;
 use Exception;
 
@@ -46,7 +46,7 @@ class CsvController extends Controller
   public function export()
   {
     try {
-      $stores = Store::latest()->get();
+      $stores = StoreComment::latest()->get();
       $dateCsv = date('YmdHis') . '.csv';
       $csvFileName = '../public/storage/csv_export/' . $dateCsv;
       $res = fopen($csvFileName, 'w');
