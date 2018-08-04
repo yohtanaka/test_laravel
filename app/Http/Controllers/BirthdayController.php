@@ -8,9 +8,9 @@ use phpQuery;
 
 class BirthdayController extends Controller
 {
-  public function birthday()
+  public function index()
   {
-    return view('birthday.birthday');
+    return view('birthday.index');
   }
 
   public function search(DateRequest $request)

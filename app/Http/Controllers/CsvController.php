@@ -9,9 +9,9 @@ use Exception;
 
 class CsvController extends Controller
 {
-  public function csv()
+  public function index()
   {
-    return view('csv.csv');
+    return view('csv.index');
   }
 
   public function import(Request $request)

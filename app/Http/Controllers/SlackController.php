@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class SlackController extends Controller
 {
-  public function slack()
+  public function index()
   {
-    return view('slack.slack');
+    return view('slack.index');
   }
 
   public function post(Request $request)

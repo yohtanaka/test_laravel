@@ -14,15 +14,15 @@ Route::get('/post/{id}/edit', 'PostController@edit');
 Route::put('/post/{id}', 'PostController@update');
 Route::delete('/post/{id}','PostController@destroy');
 
-Route::get('/mail', 'MailController@mail');
+Route::get('/mail', 'MailController@index');
 Route::post('/mail/confirm', 'MailController@confirm');
 Route::post('/mail/sent', 'MailController@sent');
 
-Route::get('/csv', 'CsvController@csv');
+Route::get('/csv', 'CsvController@index');
 Route::post('/csv/import', 'CsvController@import');
 Route::get('/csv/export', 'CsvController@export');
 
-Route::get('/slack', 'SlackController@slack');
+Route::get('/slack', 'SlackController@index');
 Route::post('/slack', 'SlackController@post');
 
 Route::get('/twitter', 'TwitterController@index');
@@ -31,10 +31,10 @@ Route::post('/twitter/store', 'TwitterController@store');
 Route::get('/twitter/search', 'TwitterController@search');
 Route::post('/twitter/show_result', 'TwitterController@showResult');
 
-Route::get('/birthday', 'BirthdayController@birthday');
+Route::get('/birthday', 'BirthdayController@index');
 Route::post('/birthday/search', 'BirthdayController@search');
 
-Route::get('/timer', 'TimerController@timer');
+Route::get('/timer', 'TimerController@index');
 Route::post('/timer/birthday', 'TimerController@birthday');
 
 Route::get('/photo', 'PhotoController@index');

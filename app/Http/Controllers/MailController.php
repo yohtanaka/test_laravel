@@ -7,9 +7,9 @@ use Mail;
 
 class MailController extends Controller
 {
-  public function mail()
+  public function index()
   {
-    return view('mail.mail');
+    return view('mail.index');
   }
 
   public function confirm(Request $request)

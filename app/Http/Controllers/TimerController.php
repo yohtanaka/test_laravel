@@ -7,14 +7,14 @@ use App\Http\Requests\DateRequest;
 
 class TimerController extends Controller
 {
-  public function timer()
+  public function index()
   {
     $date = [
       'year'  => '2020',
       'month' => '07',
       'day'   => '24'
     ];
-    return view('timer.timer', compact('date'));
+    return view('timer.index', compact('date'));
   }
 
   public function birthday(DateRequest $request)
