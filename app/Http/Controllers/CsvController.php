@@ -46,15 +46,15 @@ class CsvController extends Controller
   public function export()
   {
     try {
-      $stores = StoreComment::latest()->get();
-      $dateCsv = date('YmdHis') . '.csv';
+      $stores      = StoreComment::latest()->get();
+      $dateCsv     = date('YmdHis') . '.csv';
       $csvFileName = '../public/storage/csv_export/' . $dateCsv;
       $res = fopen($csvFileName, 'w');
       if ($res === FALSE) {
         throw new Exception('ファイルの書き込みに失敗しました');
       }
-      $dataList[] = array("名前", "カテゴリ", "オススメポイント", "10段階評価", "最近行った日");
-      $categories = ["食事", "デザート", "飲み", "テイクアウト", "その他"];
+      $dataList[]  = array("名前", "カテゴリ", "オススメポイント", "10段階評価", "最近行った日");
+      $categories  = ["食事", "デザート", "飲み", "テイクアウト", "その他"];
       foreach ($stores as $store) {
         $dataList[] = array($store['name'], $categories[$store['category']], $store['description'], $store['rating'], $store['date'], );
       }

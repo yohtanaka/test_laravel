@@ -15,7 +15,7 @@ class TwitterController extends Controller
       env("TWITTER_ACCESS_TOKEN"),
       env("TWITTER_ACCESS_TOKEN_SECRET")
     );
-    $contents = $connection->get(
+    $contents   = $connection->get(
       "statuses/home_timeline",
       array("count" => 20)
     );

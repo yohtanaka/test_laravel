@@ -38,7 +38,7 @@ class PhotoController extends Controller
 
     public function store(Request $request)
     {
-      $photo = new Photo;
+      $photo          = new Photo;
       $photo->title   = $request->title;
       $photo->comment = $request->comment;
       if (\Auth::user()) {
