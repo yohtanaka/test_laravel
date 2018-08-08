@@ -59,3 +59,6 @@ Route::prefix('/photo')->group(function() {
   Route::get('/{id}', 'PhotoController@show');
 });
 
+Route::prefix('/calendar')->group(function() {
+  Route::get('/', 'CalendarController@index');
+});
