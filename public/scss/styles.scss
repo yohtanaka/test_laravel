@@ -99,15 +99,47 @@ th, td, tr {
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
-  th {
-    border-bottom: 2px solid $laravel;
-  }
   td {
     max-width: 400px;
   }
   &__short {
     max-width: 400px;
   }
+}
+
+.line_laravel {
+  th {
+    border-bottom: 2px solid $laravel;
+  }
+}
+
+.calendar {
+  margin: 15px auto;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  a {
+    text-decoration: none;
+  }
+  th {
+    background: #eee;
+  }
+  th, td {
+    padding: 7px;
+    text-align: center;
+  }
+}
+
+.week_0 {
+  color: red;
+}
+.week_6 {
+  color: blue;
+}
+.today {
+  font-weight: bold;
+}
+.gray {
+  color: #dedede;
 }
 
 .tweet {

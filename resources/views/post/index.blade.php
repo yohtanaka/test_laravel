@@ -8,7 +8,7 @@
   <li><a href="/post/create">新規投稿</a></li>
   <hr>
   <li>投稿一覧</li>
-  <table class="post-table">
+  <table class="post-table line_laravel">
     <tr>
       <th>名前</th>
       <th>カテゴリ</th>

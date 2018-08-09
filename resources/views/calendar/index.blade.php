@@ -4,7 +4,7 @@
 
 @section('content')
 <h2>カレンダー機能</h2>
-<table>
+<table class="post-table calendar">
   <thead>
     <tr>
       <th><a href="">&laquo;</a></th>
