@@ -23,7 +23,8 @@
       <td>Sat</td>
     </tr>
     <tr>
-      <td class="week_0">1</td>
+      {!! $body !!}
+      <!-- <td class="week_0">1</td>
       <td class="week_1">2</td>
       <td class="week_2">3</td>
       <td class="week_3">4</td>
@@ -38,7 +39,7 @@
       <td class="gray">2</td>
       <td class="gray">3</td>
       <td class="gray">4</td>
-      <td class="gray">5</td>
+      <td class="gray">5</td> -->
     </tr>
   </tbody>
   <tfoot>
