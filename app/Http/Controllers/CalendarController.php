@@ -22,7 +22,7 @@ class CalendarController extends Controller
       if ($day->format('w') % 7 === 0) {
         $body .= '</tr><tr>';
       }
-      $body .= sprintf('<td>%d</td>', $day->format('d'));
+      $body .= sprintf('<td class="week_%d">%d</td>', $day->format('w'), $day->format('d'));
     }
     return view('calendar.index', compact('body'));
   }
