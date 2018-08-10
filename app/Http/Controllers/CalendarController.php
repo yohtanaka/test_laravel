@@ -19,6 +19,9 @@ class CalendarController extends Controller
       new DateTime('first day of next month')
     );
     foreach ($period as $day) {
+      if ($day->format('w') % 7 === 0) {
+        $body .= '</tr><tr>';
+      }
       $body .= sprintf('<td>%d</td>', $day->format('d'));
     }
     return view('calendar.index', compact('body'));
