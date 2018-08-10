@@ -8,7 +8,7 @@
   <thead>
     <tr>
       <th><a href="">&laquo;</a></th>
-      <th colspan="5">month 20**</th>
+      <th colspan="5">{{ $yearMonth }}</th>
       <th><a href="">&raquo;</a></th>
     </tr>
   </thead>

@@ -12,8 +12,12 @@ class CalendarController extends Controller
 {
   public function index()
   {
+    $t         = '2015-09';
+    $thisMonth = new DateTime($t);
+    $yearMonth = $thisMonth->format('F Y');
+
     $tail   = '';
-    $lastDayOfPreviousMonth = new DateTime('last day of previous month');
+    $lastDayOfPreviousMonth = new DateTime('last day of' . $yearMonth . '-1 month');
     while ($lastDayOfPreviousMonth->format('w') < 6) {
       $tail = sprintf('<td class="gray">%d</td>', $lastDayOfPreviousMonth->format('d')) . $tail;
       $lastDayOfPreviousMonth->sub(new DateInterval('P1D'));
@@ -21,9 +25,9 @@ class CalendarController extends Controller
 
     $body   = '';
     $period = new DatePeriod(
-      new DateTime('first day of this month'),
+      new DateTime('first day of' . $yearMonth),
       new DateInterval('P1D'),
-      new DateTime('first day of next month')
+      new DateTime('first day of' . $yearMonth . '+1 month')
     );
     foreach ($period as $day) {
       if ($day->format('w') % 7 === 0) {
@@ -33,13 +37,13 @@ class CalendarController extends Controller
     }
 
     $head                = '';
-    $firstDayOfNextMonth = new DateTime('first day of next month');
+    $firstDayOfNextMonth = new DateTime('first day of' . $yearMonth . '+1 month');
     while ($firstDayOfNextMonth->format('w') > 0) {
       $head .= sprintf('<td class="gray">%d</td>', $firstDayOfNextMonth->format('d'));
       $firstDayOfNextMonth->add(new DateInterval('P1D'));
     }
 
     $days = '<tr>' . $tail . $body . $head . '</tr>';
-    return view('calendar.index', compact('days'));
+    return view('calendar.index', compact('days', 'yearMonth'));
   }
 }
