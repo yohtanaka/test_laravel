@@ -19,8 +19,6 @@ class CalendarController extends Controller
       $lastDayOfPreviousMonth->sub(new DateInterval('P1D'));
     }
 
-
-
     $body   = '';
     $period = new DatePeriod(
       new DateTime('first day of this month'),
@@ -33,12 +31,15 @@ class CalendarController extends Controller
       }
       $body .= sprintf('<td class="week_%d">%d</td>', $day->format('w'), $day->format('d'));
     }
+
     $head                = '';
     $firstDayOfNextMonth = new DateTime('first day of next month');
     while ($firstDayOfNextMonth->format('w') > 0) {
       $head .= sprintf('<td class="gray">%d</td>', $firstDayOfNextMonth->format('d'));
       $firstDayOfNextMonth->add(new DateInterval('P1D'));
     }
-    return view('calendar.index', compact('tail', 'body', 'head'));
+
+    $days = '<tr>' . $tail . $body . $head . '</tr>';
+    return view('calendar.index', compact('days'));
   }
 }

@@ -22,9 +22,7 @@
       <td>Fri</td>
       <td>Sat</td>
     </tr>
-    <tr>
-      {!! $tail . $body . $head !!}
-    </tr>
+      {!! $days !!}
   </tbody>
   <tfoot>
     <tr>
