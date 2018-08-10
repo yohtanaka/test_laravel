@@ -24,6 +24,12 @@ class CalendarController extends Controller
       }
       $body .= sprintf('<td class="week_%d">%d</td>', $day->format('w'), $day->format('d'));
     }
-    return view('calendar.index', compact('body'));
+    $head = '';
+    $firstDayOfNextMonth = new DateTime('first day of next month');
+    while ($firstDayOfNextMonth->format('w') > 0) {
+      $head .= sprintf('<td class="gray">%d</td>', $firstDayOfNextMonth->format('d'));
+      $firstDayOfNextMonth->add(new DateInterval('P1D'));
+    }
+    return view('calendar.index', compact('body', 'head'));
   }
 }

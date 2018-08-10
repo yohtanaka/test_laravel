@@ -23,7 +23,7 @@
       <td>Sat</td>
     </tr>
     <tr>
-      {!! $body !!}
+      {!! $body . $head !!}
       <!-- <td class="week_0">1</td>
       <td class="week_1">2</td>
       <td class="week_2">3</td>
