@@ -12,7 +12,16 @@ class CalendarController extends Controller
 {
   public function index()
   {
-    $body = '';
+    $tail   = '';
+    $lastDayOfPreviousMonth = new DateTime('last day of previous month');
+    while ($lastDayOfPreviousMonth->format('w') < 6) {
+      $tail = sprintf('<td class="gray">%d</td>', $lastDayOfPreviousMonth->format('d')) . $tail;
+      $lastDayOfPreviousMonth->sub(new DateInterval('P1D'));
+    }
+
+
+
+    $body   = '';
     $period = new DatePeriod(
       new DateTime('first day of this month'),
       new DateInterval('P1D'),
@@ -24,12 +33,12 @@ class CalendarController extends Controller
       }
       $body .= sprintf('<td class="week_%d">%d</td>', $day->format('w'), $day->format('d'));
     }
-    $head = '';
+    $head                = '';
     $firstDayOfNextMonth = new DateTime('first day of next month');
     while ($firstDayOfNextMonth->format('w') > 0) {
       $head .= sprintf('<td class="gray">%d</td>', $firstDayOfNextMonth->format('d'));
       $firstDayOfNextMonth->add(new DateInterval('P1D'));
     }
-    return view('calendar.index', compact('body', 'head'));
+    return view('calendar.index', compact('tail', 'body', 'head'));
   }
 }

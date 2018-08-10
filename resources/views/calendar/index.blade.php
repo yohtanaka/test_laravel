@@ -23,23 +23,7 @@
       <td>Sat</td>
     </tr>
     <tr>
-      {!! $body . $head !!}
-      <!-- <td class="week_0">1</td>
-      <td class="week_1">2</td>
-      <td class="week_2">3</td>
-      <td class="week_3">4</td>
-      <td class="week_4">5</td>
-      <td class="week_5" class="week_6">6</td>
-      <td class="week_6">7</td>
-    </tr>
-    <tr>
-      <td class="week_0">30</td>
-      <td class="week_1">31</td>
-      <td class="gray">1</td>
-      <td class="gray">2</td>
-      <td class="gray">3</td>
-      <td class="gray">4</td>
-      <td class="gray">5</td> -->
+      {!! $tail . $body . $head !!}
     </tr>
   </tbody>
   <tfoot>
