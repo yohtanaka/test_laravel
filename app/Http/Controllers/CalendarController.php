@@ -21,6 +21,11 @@ class CalendarController extends Controller
     } catch (Exception $e) {
       $thisMonth = new DateTime('first day of this month');
     }
+
+    $dt        = clone $thisMonth;
+    $prev      = $dt->modify('-1 month')->format('Y-m');
+    $dt        = clone $thisMonth;
+    $next      = $dt->modify('+1 month')->format('Y-m');
     $yearMonth = $thisMonth->format('F Y');
 
     $tail   = '';
@@ -51,6 +56,6 @@ class CalendarController extends Controller
     }
 
     $days = '<tr>' . $tail . $body . $head . '</tr>';
-    return view('calendar.index', compact('days', 'yearMonth'));
+    return view('calendar.index', compact('days', 'prev', 'yearMonth', 'next'));
   }
 }

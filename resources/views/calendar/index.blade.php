@@ -11,9 +11,9 @@
 <table class="post-table calendar">
   <thead>
     <tr>
-      <th><a href="">&laquo;</a></th>
+      <th><a href="/calendar/?month={{ $prev }}">&laquo;</a></th>
       <th colspan="5">{{ $yearMonth }}</th>
-      <th><a href="">&raquo;</a></th>
+      <th><a href="/calendar/?month={{ $next }}">&raquo;</a></th>
     </tr>
   </thead>
   <tbody>
@@ -30,7 +30,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <th colspan="7"><a href="">Today</a></th>
+      <th colspan="7"><a href="/calendar">Today</a></th>
     </tr>
   </tfoot>
 </table>
