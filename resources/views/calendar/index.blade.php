@@ -4,6 +4,10 @@
 
 @section('content')
 <h2>カレンダー機能</h2>
+<form class="center shortest" action="/calendar" method="get" accept-charset="utf-8">
+  <input class="form-control" type="month" name="month">
+  <input class="btn btn-laravel" type="submit" value="送信する">
+</form>
 <table class="post-table calendar">
   <thead>
     <tr>
@@ -22,7 +26,7 @@
       <td>Fri</td>
       <td>Sat</td>
     </tr>
-      {!! $days !!}
+    {!! $days !!}
   </tbody>
   <tfoot>
     <tr>
