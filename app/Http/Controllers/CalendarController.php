@@ -6,14 +6,21 @@ use Illuminate\Http\Request;
 use DatePeriod;
 use DateTime;
 use DateInterval;
+use Exception;
 
 
 class CalendarController extends Controller
 {
   public function index()
   {
-    $t         = '2015-09';
-    $thisMonth = new DateTime($t);
+    try {
+      if (!isset($_GET['month']) || !preg_match('/\A\d{4}-\d{2}\z/', $_GET['month'])) {
+        throw new Exception();
+      }
+      $thisMonth = new DateTime($_GET['month']);
+    } catch (Exception $e) {
+      $thisMonth = new DateTime('first day of this month');
+    }
     $yearMonth = $thisMonth->format('F Y');
 
     $tail   = '';
