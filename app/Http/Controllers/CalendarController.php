@@ -41,11 +41,13 @@ class CalendarController extends Controller
       new DateInterval('P1D'),
       new DateTime('first day of' . $yearMonth . '+1 month')
     );
+    $today  = new DateTime('today');
     foreach ($period as $day) {
       if ($day->format('w') % 7 === 0) {
         $body .= '</tr><tr>';
       }
-      $body .= sprintf('<td class="week_%d">%d</td>', $day->format('w'), $day->format('d'));
+      $todayClass = ($day->format('Y-m-d') === $today->format('Y-m-d')) ? 'today' : '';
+      $body      .= sprintf('<td class="week_%d %s">%d</td>', $day->format('w'), $todayClass, $day->format('d'));
     }
 
     $head                = '';
