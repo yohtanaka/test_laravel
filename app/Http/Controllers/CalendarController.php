@@ -43,9 +43,7 @@ class CalendarController extends Controller
     );
     $today  = new DateTime('today');
     foreach ($period as $day) {
-      if ($day->format('w') % 7 === 0) {
-        $body .= '</tr><tr>';
-      }
+      if ($day->format('w') === '0') {$body .= '</tr><tr>';}
       $todayClass = ($day->format('Y-m-d') === $today->format('Y-m-d')) ? 'today' : '';
       $body      .= sprintf('<td class="week_%d %s">%d</td>', $day->format('w'), $todayClass, $day->format('d'));
     }
