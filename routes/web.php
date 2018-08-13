@@ -62,3 +62,7 @@ Route::prefix('/photo')->group(function() {
 Route::prefix('/calendar')->group(function() {
   Route::get('/', 'CalendarController@index');
 });
+
+Route::prefix('/quiz')->group(function() {
+  Route::get('/', 'QuizController@index');
+});
