@@ -14,6 +14,7 @@
   <script src="{{ asset('js/app.js') }}" defer></script>
   <script src="/js/main.js"></script>
   <script src="/js/timer.js"></script>
+  <script src="/js/quiz.js"></script>
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
