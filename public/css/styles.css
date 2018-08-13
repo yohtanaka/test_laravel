@@ -41,6 +41,10 @@ footer p {
 #content h2, #content li {
   margin: 20px 0;
 }
+#container {
+  width: 500px;
+  margin: 15px auto;
+}
 #timer {
   font-size: 32px;
 }
