@@ -5,7 +5,7 @@ $(function() {
     var $selected = $(this);
     var answer    = $selected.text();
 
-    $.post('/_answer.php', {
+    $.post('/_answer', {
     }).done(function(res) {
       if (answer === res.correct_answer) {
         //
