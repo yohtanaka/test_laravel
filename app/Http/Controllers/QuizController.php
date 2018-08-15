@@ -16,6 +16,12 @@ class QuizController extends Controller
     }
   }
 
+  public function checkAnswer()
+  {
+    $correctAnswer = $this->_quizSet[$_SESSION['current_num']]['a'][0];
+    return $correctAnswer;
+  }
+
   public function getCurrentQuiz()
   {
     return $this->_quizSet[$_SESSION['current_num']];
@@ -59,5 +65,16 @@ class QuizController extends Controller
     shuffle($data['a']);
 
     return view('quiz.index', compact('data'));
+  }
+
+  public function _answer(Request $request)
+  {
+    $quiz          = new QuizController();
+    $correctAnswer = $quiz->checkAnswer();
+
+    header('Content-Type: application/json; charset=UTF-8');
+    echo json_encode([
+      'correct_answer' => $correctAnswer
+    ]);
   }
 }
