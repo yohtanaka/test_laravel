@@ -33,8 +33,8 @@ Route::prefix('/slack')->group(function() {
   Route::post('/', 'SlackController@post');
 });
 
-Route::prefix('/post')->group(function() {
-  Route::get('/twitter', 'TwitterController@index');
+Route::prefix('/twitter')->group(function() {
+  Route::get('/', 'TwitterController@index');
   Route::get('/twitter/create', 'TwitterController@create');
   Route::post('/twitter/store', 'TwitterController@store');
   Route::get('/twitter/search', 'TwitterController@search');
