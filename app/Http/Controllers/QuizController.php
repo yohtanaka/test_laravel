@@ -66,15 +66,4 @@ class QuizController extends Controller
 
     return view('quiz.index', compact('data'));
   }
-
-  public function _answer(Request $request)
-  {
-    $quiz          = new QuizController();
-    $correctAnswer = $quiz->checkAnswer();
-
-    header('Content-Type: application/json; charset=UTF-8');
-    echo json_encode([
-      'correct_answer' => $correctAnswer
-    ]);
-  }
 }

@@ -17,4 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/answer', 'QuizController@_answer');
+Route::post('/answer', 'Api\QuizController@_answer');
