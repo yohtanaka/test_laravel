@@ -35,10 +35,10 @@ Route::prefix('/slack')->group(function() {
 
 Route::prefix('/twitter')->group(function() {
   Route::get('/', 'TwitterController@index');
-  Route::get('/twitter/create', 'TwitterController@create');
-  Route::post('/twitter/store', 'TwitterController@store');
-  Route::get('/twitter/search', 'TwitterController@search');
-  Route::post('/twitter/show_result', 'TwitterController@showResult');
+  Route::get('/create', 'TwitterController@create');
+  Route::post('/store', 'TwitterController@store');
+  Route::get('/search', 'TwitterController@search');
+  Route::post('/show_result', 'TwitterController@showResult');
 });
 
 Route::prefix('/birthday')->group(function() {
