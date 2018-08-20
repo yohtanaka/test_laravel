@@ -3,6 +3,9 @@ $(function() {
 
   $('.answer').on('click', function() {
     var $selected = $(this);
+    if ($selected.hasClass('correct') || $selected.hasClass('wrong')) {
+      return;
+    }
     $selected.addClass('selected');
     var answer    = $selected.text();
 
@@ -27,6 +30,13 @@ $(function() {
       } else {
         $selected.text(answer + ' ... WRONG!');
       }
+      $('#btn').removeClass('disabled');
     });
+  });
+
+  $('#btn').on('click', function() {
+    if (!$(this).hasClass('disabled')) {
+      location.reload();
+    }
   });
 });
