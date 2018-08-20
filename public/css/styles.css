@@ -151,3 +151,13 @@ th, td, tr {
 .photo__large {
   max-width: 100%;
 }
+.correct {
+  color: #e74430;
+  font-weight: bold;
+}
+.wrong {
+  color: #aaa;
+}
+.selected {
+  font-weight: bold;
+}

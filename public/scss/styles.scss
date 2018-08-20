@@ -178,3 +178,14 @@ th, td, tr {
     max-width: 100%;
   }
 }
+
+.correct {
+  color: $laravel;
+  font-weight: bold;
+}
+.wrong {
+  color: #aaa;
+}
+.selected {
+  font-weight: bold;
+}

@@ -3,6 +3,7 @@ $(function() {
 
   $('.answer').on('click', function() {
     var $selected = $(this);
+    $selected.addClass('selected');
     var answer    = $selected.text();
 
     $.ajax({
@@ -14,10 +15,17 @@ $(function() {
         selectedAnswer: answer,
       }
     }).done(function(res) {
+      $('.answer').each(function() {
+        if ($(this).text() === res) {
+          $(this).addClass('correct');
+        } else {
+          $(this).addClass('wrong');
+        }
+      });
       if (answer === res) {
-        alert('正解です！');
+        $selected.text(answer + ' ... CORRECT!');
       } else {
-        alert('不正解です！');
+        $selected.text(answer + ' ... WRONG!');
       }
     });
   });
