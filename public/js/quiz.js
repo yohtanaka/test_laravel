@@ -5,14 +5,19 @@ $(function() {
     var $selected = $(this);
     var answer    = $selected.text();
 
-    $.post('/api/answer', {
-
+    $.ajax({
+      url: '/api/answer',
+      type: 'POST',
+      dataType:'json',
+      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+      data: {
+        selectedAnswer: answer,
+      }
     }).done(function(res) {
-      alert(res.correct_answer);
-      if (answer === res.correct_answer) {
-        //
+      if (answer === res) {
+        alert('正解です！');
       } else {
-        //
+        alert('不正解です！');
       }
     });
   });
