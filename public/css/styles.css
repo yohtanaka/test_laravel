@@ -41,6 +41,10 @@ footer p {
 #content h2, #content li {
   margin: 20px 0;
 }
+#container {
+  width: 500px;
+  margin: 15px auto;
+}
 #timer {
   font-size: 32px;
 }
@@ -60,6 +64,9 @@ footer p {
 .menu {
   float: right;
   margin: 40px;
+}
+.menu__link {
+  width: 50%;
 }
 .clearfix:after {
   clear: both;
@@ -143,4 +150,14 @@ th, td, tr {
 }
 .photo__large {
   max-width: 100%;
+}
+.correct {
+  color: #e74430;
+  font-weight: bold;
+}
+.wrong {
+  color: #aaa;
+}
+.selected {
+  font-weight: bold;
 }

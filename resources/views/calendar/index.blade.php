@@ -34,5 +34,4 @@
     </tr>
   </tfoot>
 </table>
-
 @endsection

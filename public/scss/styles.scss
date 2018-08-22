@@ -47,6 +47,11 @@ footer {
   }
 }
 
+#container {
+  width: 500px;
+  margin: 15px auto;
+}
+
 #timer {
   font-size: 32px;
 }
@@ -71,6 +76,10 @@ footer {
 .menu {
   float: right;
   margin: 40px
+}
+
+.menu__link {
+  width: 50%;
 }
 
 .clearfix:after {
@@ -168,4 +177,15 @@ th, td, tr {
   &__large {
     max-width: 100%;
   }
+}
+
+.correct {
+  color: $laravel;
+  font-weight: bold;
+}
+.wrong {
+  color: #aaa;
+}
+.selected {
+  font-weight: bold;
 }
