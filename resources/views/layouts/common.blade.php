@@ -15,6 +15,7 @@
   <script src="/js/main.js"></script>
   <script src="/js/timer.js"></script>
   <script src="/js/quiz.js"></script>
+  <script src="/js/tapsuggest.js"></script>
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -23,6 +24,7 @@
   <!-- Styles -->
   <link href="/css/styles.css" rel="stylesheet">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="/css/tapsuggest.css" rel="stylesheet">
 </head>
 <body>
   @include('layouts.header')
