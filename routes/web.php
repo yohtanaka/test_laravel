@@ -66,3 +66,7 @@ Route::prefix('/calendar')->group(function() {
 Route::prefix('/quiz')->group(function() {
   Route::get('/', 'QuizController@index');
 });
+
+Route::prefix('/search')->group(function() {
+  Route::get('/', 'SearchController@index');
+});
