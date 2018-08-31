@@ -15,6 +15,7 @@ class CreatePrefsTable extends Migration
     {
         Schema::create('prefs', function (Blueprint $table) {
             $table->increments ('id');
+            $table->integer    ('code');
             $table->string     ('name');
             $table->string     ('name_kana');
         });
