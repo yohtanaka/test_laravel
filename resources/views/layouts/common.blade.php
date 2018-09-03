@@ -24,7 +24,7 @@
   <!-- Styles -->
   <link href="/css/styles.css" rel="stylesheet">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-  <link href="/css/tapsuggest.css" rel="stylesheet">
+  <link href="/css/tapsuggest.css" rel="stylesheet" media="all">
 </head>
 <body>
   @include('layouts.header')
