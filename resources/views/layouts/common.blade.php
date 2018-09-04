@@ -10,7 +10,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- Scripts -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="{{ asset('js/app.js') }}" defer></script>
   <script src="/js/main.js"></script>
   <script src="/js/timer.js"></script>
