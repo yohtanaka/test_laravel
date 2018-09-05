@@ -15,7 +15,7 @@ $(function(){
 </script>
 <h2>オートコンプリート検索機能</h2>
 <div class="container">
-	<h2>スポーツ検索</h2>
+	<h3>都道府県検索</h3>
     <div class="formArea">
         <form method="post" action="">
 			<div class="inputArea">
