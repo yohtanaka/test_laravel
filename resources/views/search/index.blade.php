@@ -15,14 +15,14 @@ $(function(){
 </script>
 <h2>オートコンプリート検索機能</h2>
 <div class="container">
-	<h3>都道府県検索</h3>
+	<p>都道府県検索</p>
     <div class="formArea">
         <form method="post" action="">
 			<div class="inputArea">
-				<input type="text" class="tsInput">
+				<input type="text" class="tsInput form-control">
 			</div>
 			<div class="submitArea">
-				<input type="submit" value="送信する">
+				<input type="submit" value="送信する" class="btn btn-laravel">
 			</div>
         </form>
     </div>
