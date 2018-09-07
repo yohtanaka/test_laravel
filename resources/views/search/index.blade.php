@@ -20,12 +20,12 @@ $(function(){
         <form method="post" action="">
 			<div class="inputArea">
 				<input type="text" class="tsInput form-control">
+                <div class="tsArea"></div>
 			</div>
 			<div class="submitArea">
 				<input type="submit" value="送信する" class="btn btn-laravel">
 			</div>
         </form>
     </div>
-    <div class="tsArea"></div>
 </div>
 @endsection

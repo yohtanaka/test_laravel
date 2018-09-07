@@ -53,7 +53,7 @@
 			if(!setting.tsSpScroll) return false;
 			if(_ua.Mobile){
 				var position = $tsInput.offset().top;
-				$('body,html').animate({scrollTop: (position - 10)}, 300);	
+				$('body,html').animate({scrollTop: (position - 10)}, 300);
 			}
 		});
 		$tsResult.on('touchstart', function(e){
@@ -127,7 +127,7 @@
 			click_flg = true;
 			$tsInput.blur();
 			var $form = $($tsInput.closest('form'));
-			if($(e.target).html().indexOf("<li>") == -1 && $(e.target).html().indexOf("</li>") == -1){	
+			if($(e.target).html().indexOf("<li>") == -1 && $(e.target).html().indexOf("</li>") == -1){
 				$tsInput.val($(e.target).text());
 				if(setting.tsFormAutoSubmit) $form.submit();
 			}
@@ -181,7 +181,7 @@
 	}
 	var _ua = (function(u){
 		return {
-			Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) 
+			Tablet:(u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1)
 				|| u.indexOf("ipad") != -1
 				|| (u.indexOf("android") != -1 && u.indexOf("mobile") == -1)
 				|| (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1)
