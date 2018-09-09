@@ -19,8 +19,9 @@ $(function(){
     <div class="formArea">
         <form method="post" action="">
 			<div class="inputArea">
-				<input type="text" class="tsInput form-control">
+				<input type="text" id="name" class="tsInput form-control">
                 <div class="tsArea"></div>
+                <input type="text" id="name_kana" class="form-control">
 			</div>
 			<div class="submitArea">
 				<input type="submit" value="送信する" class="btn btn-laravel">
@@ -28,4 +29,12 @@ $(function(){
         </form>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(
+        function() {
+            $.fn.autoKana('#name', '#name_kana', {
+                katakana : true
+        });
+    });
+</script>
 @endsection
