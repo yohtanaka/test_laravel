@@ -24,7 +24,7 @@ class TimerController extends Controller
       'month' => sprintf('%02d', $request->input('month')),
       'day'   => sprintf('%02d', $request->input('day'))
     ];
-    $today = date('Ymd');
+    $today    = date('Ymd');
     $birthday = $date['year'].$date['month'].$date['day'];
     if ( $birthday < $today ) {
       $date['year'] = intval($date['year']) +1;

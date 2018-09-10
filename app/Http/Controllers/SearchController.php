@@ -9,7 +9,7 @@ class SearchController extends Controller
 {
 	public function index() {
 		$prefs = [];
-		$data = Pref::all();
+		$data  = Pref::all();
 		foreach ($data as $d) {
 			$prefs[] = [
 				$d['name'],

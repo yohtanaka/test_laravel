@@ -28,7 +28,7 @@ class PhotoController extends Controller
     {
       $image_name = uniqid("image_") . "." . $request->file('photo')->guessExtension();
       $request->file('photo')->move(public_path() . "/images/tmp", $image_name);
-      $hash = array(
+      $hash       = array(
         'image'   => "/images/tmp/".$image_name,
         'title'   => $request->title,
         'comment' => $request->comment,
@@ -51,10 +51,10 @@ class PhotoController extends Controller
       if (!file_exists(public_path() . "/images/" . $lastInsertedId)) {
       mkdir(public_path() . "/images/" . $lastInsertedId, 0777);
       }
-      $image_path = "/images/" . $lastInsertedId . "/image." . pathinfo($request->image, PATHINFO_EXTENSION);
+      $image_path     = "/images/" . $lastInsertedId . "/image." . pathinfo($request->image, PATHINFO_EXTENSION);
       rename(public_path() . $request->image, public_path() . $image_path);
 
-      $photo->image = $image_path;
+      $photo->image   = $image_path;
       $photo->update();
       return view('photo.store');
     }

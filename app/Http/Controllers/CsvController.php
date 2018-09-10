@@ -16,7 +16,7 @@ class CsvController extends Controller
 
   public function import(Request $request)
   {
-    $rules = ['csvFile' => 'required',];
+    $rules    = ['csvFile' => 'required',];
     $this->validate($request, $rules);
 
     $filePath = "../public/storage/csv_export/" . $_FILES["csvFile"]["name"];
@@ -26,7 +26,7 @@ class CsvController extends Controller
     }else{
         print 'ファイルの読み込みに失敗しました';
     }
-    $objFile = new SplFileObject($filePath);
+    $objFile  = new SplFileObject($filePath);
     $objFile->setFlags(SplFileObject::READ_CSV);
     $objFile->setCsvControl("\t", "\"");
 

@@ -67,7 +67,7 @@ class TwitterController extends Controller
       env("TWITTER_ACCESS_TOKEN_SECRET")
     );
 
-    $result = $connection->get(
+    $result   = $connection->get(
       "search/tweets",
       array("q" => $request->input('search'))
     );

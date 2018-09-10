@@ -13,7 +13,7 @@ class SlackController extends Controller
 
   public function post(Request $request)
   {
-    $rules = [
+    $rules       = [
       'message' => 'required',
     ];
     $this->validate($request, $rules);
