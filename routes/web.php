@@ -70,3 +70,7 @@ Route::prefix('/quiz')->group(function() {
 Route::prefix('/search')->group(function() {
   Route::get('/', 'SearchController@index');
 });
+
+Route::prefix('/vote')->group(function() {
+  Route::get('/', 'VoteController@index');
+});
