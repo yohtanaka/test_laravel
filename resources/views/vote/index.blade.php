@@ -11,6 +11,6 @@
 		<div class="box" id="box_1" data-id="1"></div>
 		<div class="box" id="box_2" data-id="2"></div>
 	</div>
-	<div id="btn">Vote and See Results</div>
+	<div id="btn" class="btn btn-laravel">Vote and See Results</div>
 </form>
 @endsection
