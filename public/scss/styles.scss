@@ -203,12 +203,11 @@ th, td, tr {
   font-size: 48px;
   font-weight: bold;
   line-height: 150px;
+  text-align: center;
 }
-
 .box + .box {
   margin-left: 10px;
 }
-
 #box_0 {
   background-color: red;
 }
@@ -217,4 +216,7 @@ th, td, tr {
 }
 #box_2 {
   background-color: green;
+}
+.vote-selected {
+  opacity: 1;
 }
