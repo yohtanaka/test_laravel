@@ -49,4 +49,10 @@ $(function(){
     $('#comment').html('コメント<input class="form-control post-table__short" type="text" name="comment" placeholder="任意">')
     $('#send').html('<input class="btn btn-laravel" type="submit" value="確認画面へ">');
   });
+
+  $('.box').on('click', function() {
+    $('.box').removeClass('vote-selected');
+    $(this).addClass('vote-selected');
+    $('#answer').val($(this).data('id'));
+  });
 })
