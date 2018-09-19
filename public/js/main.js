@@ -63,4 +63,6 @@ $(function(){
 			$('form').submit();
 		}
 	});
+
+	$('.alert').fadeOut(3000);
 })

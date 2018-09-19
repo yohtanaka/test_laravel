@@ -1,4 +1,6 @@
-<?php $user = Auth::user(); ?>
+@php
+$user = Auth::user();
+@endphp
 <header class="clearfix">
   <a href="/">
     <img class="left" src="/images/logo.png" alt="">

@@ -15,4 +15,5 @@
 	</div>
 	<div id="btn" class="btn btn-laravel">Vote and See Results</div>
 </form>
+<div class="alert">error message</div>
 @endsection
