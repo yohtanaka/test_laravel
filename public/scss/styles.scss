@@ -27,21 +27,32 @@ header {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 30px;
   background-color: #444;
   color: #fff;
   height: 200px;
   li {
     float: left;
   }
-  p {
-    padding: 10px;
+  p, a, a>i {
+    text-align: center;
+  }
+  div {
+    padding-bottom: 20px;
   }
 }
 
 #content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
   padding: 120px;
   background-color: lighten($laravel, 40%);
-  min-height:550px;
   h2, li {
     margin: 20px 0;
   }
@@ -49,6 +60,7 @@ footer {
 
 #container {
   width: 500px;
+  height: 100%;
   margin: 15px auto;
 }
 
@@ -86,10 +98,6 @@ footer {
   clear: both;
   display: block;
   content: '';
-}
-
-.copy-right {
-  text-align: center;
 }
 
 .btn-laravel {
