@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStoresTable extends Migration
+class CreateVotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateStoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('stores', function (Blueprint $table) {
+        Schema::create('votes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('category');
-            $table->text('discription');
-            $table->integer('rating');
-            $table->date('date')->nullable(true);
+            $table->integer   ('user_id')->unsigned();
+            // $table->foreign   ('user_id')->references('id')->on('users');
+            $table->integer   ('vote_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateStoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stores');
+        Schema::dropIfExists('votes');
     }
 }

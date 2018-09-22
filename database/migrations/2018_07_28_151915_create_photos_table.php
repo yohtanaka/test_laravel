@@ -15,11 +15,11 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->string('image')->nullable();
-            $table->string('title')->nullable();
-            $table->text('comment')->nullable();
+            $table->integer('user_id')->nullable()->unsigned();
+            // $table->foreign('user_id')->references('id')->on('users');
+            $table->string ('image')  ->comment('画像URL')->nullable();
+            $table->string ('title')  ->comment('タイトル')->nullable();
+            $table->text   ('comment')->comment('コメント')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +31,9 @@ class CreatePhotosTable extends Migration
      */
     public function down()
     {
+        // Schema::table('photos', function (Blueprint $table) {
+        //     $table->dropForeign(['user_id']);
+        // });
         Schema::dropIfExists('photos');
     }
 }

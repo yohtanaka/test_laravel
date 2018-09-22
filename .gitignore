@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/images
+!/public/images/vote/*.jpg
 !/public/images/logo.png
 /storage/*.key
 /vendor
