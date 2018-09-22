@@ -1,235 +1,229 @@
 $laravel: #e74430;
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100px;
-  width: 100%;
-  background-color: #fff;
-  z-index: 999;
-  border-bottom: solid 3px $laravel;
-  img {
-    margin: 15px;
-  }
-  h1 {
-    color: $laravel;
-    line-height: 100px;
-    span {
-      font-size: 70%;
-    }
-  }
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	background-color: #fff;
+	z-index: 999;
+	border-bottom: solid 3px $laravel;
+	img {
+		margin: 15px;
+	}
+	h1 {
+		color: $laravel;
+		line-height: 100px;
+		span {
+			font-size: 70%;
+		}
+	}
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 30px;
-  background-color: #444;
-  color: #fff;
-  height: 200px;
-  li {
-    float: left;
-  }
-  p, a, a>i {
-    text-align: center;
-  }
-  div {
-    padding-bottom: 20px;
-  }
+	width: 100%;
+	padding-top: 30px;
+	background-color: #444;
+	color: #fff;
+	height: 200px;
+	li {
+		float: left;
+	}
+	p, a, a>i {
+		text-align: center;
+	}
+	div {
+		padding-bottom: 20px;
+	}
 }
 
 #content {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 120px;
-  background-color: lighten($laravel, 40%);
-  h2, li {
-    margin: 20px 0;
-  }
+	padding: 120px;
+	background-color: lighten($laravel, 40%);
+	min-height: 900px;
+	h2, li {
+		margin: 20px 0;
+	}
 }
 
 #container {
-  width: 500px;
-  height: 100%;
-  margin: 15px auto;
+	width: 500px;
+	height: 100%;
+	margin: 15px auto;
 }
 
 #timer {
-  font-size: 32px;
+	font-size: 32px;
 }
 
 .file {
-  display: none;
+	display: none;
 }
 
 .left {
-  float: left;
+	float: left;
 }
 
 .center {
-  text-align: center;
-  margin: 0 auto;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .shortest {
-  width: 200px;
+	width: 200px;
 }
 
 .menu {
-  float: right;
-  margin: 40px
+	float: right;
+	margin: 40px
 }
 
 .menu__link {
-  width: 50%;
+width: 50%;
 }
 
 .clearfix:after {
-  clear: both;
-  display: block;
-  content: '';
+	clear: both;
+	display: block;
+	content: '';
 }
 
 .btn-laravel {
-  color: #fff;
-  background-color: $laravel;
-  margin: 10px;
-  &:hover {
-    background-color: lighten($laravel, 20%);
-  }
+	color: #fff;
+	background-color: $laravel;
+	margin: 10px;
+	&:hover {
+		background-color: lighten($laravel, 20%);
+	}
 }
 
 .error-message {
-  color: red;
+	color: red;
 }
 
 .alert {
-  color: red;
-  float: left;
-  font-weight: bold;
+	color: red;
+	float: left;
+	font-weight: bold;
 }
 th, td, tr {
-  padding: 5px 30px;
+	padding: 5px 30px;
 }
 
 .table-content {
-  width: 400px;
+	width: 400px;
 }
 
 .post-table {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  td {
-    max-width: 400px;
-  }
-  &__short {
-    max-width: 400px;
-  }
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 10px;
+	td {
+		max-width: 400px;
+	}
+	&__short {
+		max-width: 400px;
+	}
 }
 
 .line_laravel {
-  th {
-    border-bottom: 2px solid $laravel;
-  }
+	th {
+		border-bottom: 2px solid $laravel;
+	}
 }
 
 .calendar {
-  margin: 15px auto;
-  border: 1px solid #ddd;
-  border-collapse: collapse;
-  a {
-    text-decoration: none;
-  }
-  th {
-    background: #eee;
-  }
-  th, td {
-    padding: 7px;
-    text-align: center;
-  }
+	margin: 15px auto;
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	a {
+		text-decoration: none;
+	}
+	th {
+		background: #eee;
+	}
+	th, td {
+		padding: 7px;
+		text-align: center;
+	}
 }
 
 .week_0 {
-  color: red;
+	color: red;
 }
 .week_6 {
-  color: blue;
+	color: blue;
 }
 .today {
-  font-weight: bold;
+	font-weight: bold;
 }
 .gray {
-  color: #dedede;
+	color: #dedede;
 }
 
 .tweet {
-  background-color: #e0ffff;
-  margin: 10px;
-  border-radius: 10px;
-  p {
-    margin: 0 20px;
-  }
+	background-color: #e0ffff;
+	margin: 10px;
+	border-radius: 10px;
+	p {
+		margin: 0 20px;
+	}
 }
 
 .photo {
-  margin: 2px 0;
-  height: 350px;
-  width: 350px;
-  object-fit: cover;
-  &__large {
-    max-width: 100%;
-  }
+	margin: 2px 0;
+	height: 350px;
+	width: 350px;
+	object-fit: cover;
+	&__large {
+		max-width: 100%;
+	}
 }
 
 .correct {
-  color: $laravel;
-  font-weight: bold;
+	color: $laravel;
+	font-weight: bold;
 }
 .wrong {
-  color: #aaa;
+	color: #aaa;
 }
 .selected {
-  font-weight: bold;
+	font-weight: bold;
 }
 .row {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .box {
-  width: 150px;
-  height: 150px;
-  display: inline-block;
-  opacity: 0.5;
-  cursor: pointer;
-  color: #fff;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 150px;
-  text-align: center;
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	opacity: 0.5;
+	cursor: pointer;
+	color: #fff;
+	font-size: 48px;
+	font-weight: bold;
+	line-height: 150px;
+	text-align: center;
 }
 .box + .box {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 #box_0 {
-  background-color: red;
+	background-color: red;
 }
 #box_1 {
-  background-color: blue;
+	background-color: blue;
 }
 #box_2 {
-  background-color: green;
+	background-color: green;
 }
 .vote-selected {
-  opacity: 1;
+	opacity: 1;
 }
