@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePhotosTable extends Migration
+class CreateStoreCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreatePhotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('store_comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->nullable()->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
             // $table->foreign('user_id')->references('id')->on('users');
-            $table->string ('image')  ->nullable();
-            $table->string ('title')  ->nullable();
-            $table->text   ('comment')->nullable();
+            $table->string ('name');
+            $table->integer('category');
+            $table->text   ('description');
+            $table->integer('rating');
+            $table->date   ('date')->nullable(true);
             $table->timestamps();
         });
     }
@@ -31,9 +33,9 @@ class CreatePhotosTable extends Migration
      */
     public function down()
     {
-        // Schema::table('photos', function (Blueprint $table) {
+        // Schema::table('store_comments', function (Blueprint $table) {
         //     $table->dropForeign(['user_id']);
         // });
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('store_comments');
     }
 }
