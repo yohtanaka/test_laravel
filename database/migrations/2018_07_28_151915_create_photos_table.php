@@ -17,9 +17,9 @@ class CreatePhotosTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->nullable()->unsigned();
             // $table->foreign('user_id')->references('id')->on('users');
-            $table->string ('image')  ->nullable();
-            $table->string ('title')  ->nullable();
-            $table->text   ('comment')->nullable();
+            $table->string ('image')  ->comment('画像URL')->nullable();
+            $table->string ('title')  ->comment('タイトル')->nullable();
+            $table->text   ('comment')->comment('コメント')->nullable();
             $table->timestamps();
         });
     }

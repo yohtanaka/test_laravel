@@ -15,13 +15,13 @@ class CreateStoreCommentsTable extends Migration
     {
         Schema::create('store_comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned()->nullable();
-            // $table->foreign('user_id')->references('id')->on('users');
-            $table->string ('name');
-            $table->integer('category');
-            $table->text   ('description');
-            $table->integer('rating');
-            $table->date   ('date')->nullable(true);
+            $table->integer('user_id')    ->unsigned()->nullable();
+            // $table->foreign('user_id')    ->references('id')->on('users');
+            $table->string ('name')       ->comment('店名');
+            $table->integer('category')   ->comment('カテゴリ(食事, デザート, 飲み, テイクアウト, その他)');
+            $table->text   ('description')->comment('コメント');
+            $table->integer('rating')     ->comment('評価(1〜10)');
+            $table->date   ('date')       ->comment('最近行った日')->nullable(true);
             $table->timestamps();
         });
     }
